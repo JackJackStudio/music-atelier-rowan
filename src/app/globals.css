@@ -1,0 +1,104 @@
+:root {
+  --bg: #08090c;
+  --text: #f2eee5;
+  --muted: #aaa49a;
+  --gold: #d7b46a;
+  --line: rgba(215,180,106,.28);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(82,67,48,.18), transparent 36rem),
+    linear-gradient(180deg, #0b0c10 0%, #07080a 100%);
+  font-family: Georgia, "Times New Roman", serif;
+}
+a { color: inherit; text-decoration: none; }
+
+.hero {
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+.eyebrow { color: var(--gold); letter-spacing: .42em; font-size: .78rem; margin-bottom: 1rem; }
+.hero h1 { margin: 0; font-weight: 400; letter-spacing: .04em; font-size: clamp(3rem,8vw,7.5rem); line-height: .95; }
+.tagline { margin: 1.6rem 0 0; color: var(--gold); font-size: clamp(1.1rem,2vw,1.6rem); letter-spacing: .14em; }
+.intro { max-width: 42rem; margin: 1.4rem auto 0; color: var(--muted); font-family: system-ui,sans-serif; line-height: 1.7; }
+.scrollCue { margin-top: 3rem; padding: .8rem 1.2rem; border: 1px solid var(--line); border-radius: 999px; font-family: system-ui,sans-serif; font-size: .82rem; letter-spacing: .08em; }
+
+.stories { padding: 7rem 1.5rem 8rem; max-width: 1280px; margin: 0 auto; }
+.sectionHeading { margin-bottom: 2.5rem; }
+.sectionHeading span { color: var(--gold); font-size: .75rem; letter-spacing: .22em; text-transform: uppercase; font-family: system-ui,sans-serif; }
+.sectionHeading h2 { margin: .6rem 0 0; font-size: clamp(2rem,4vw,4rem); font-weight: 400; }
+.storyGrid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; }
+
+.storyCard {
+  position: relative;
+  min-height: 34rem;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.08);
+  background: #111319;
+  isolation: isolate;
+}
+.storyCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transition: transform .7s ease, opacity .35s ease;
+}
+.storyCard.aurelia::before {
+  background: linear-gradient(180deg,rgba(57,72,102,.10),rgba(5,8,14,.95)),
+              radial-gradient(circle at 50% 18%,rgba(138,168,213,.28),transparent 48%);
+}
+.storyCard.brenalia::before {
+  background: linear-gradient(180deg,rgba(22,65,44,.10),rgba(4,12,8,.96)),
+              radial-gradient(circle at 50% 18%,rgba(74,133,88,.32),transparent 48%);
+}
+.storyCard.cazenia::before {
+  background: linear-gradient(180deg,rgba(91,24,41,.10),rgba(16,4,8,.96)),
+              radial-gradient(circle at 50% 18%,rgba(156,46,72,.30),transparent 48%);
+}
+.storyCard:hover::before { transform: scale(1.035); }
+.storyGlow { position: absolute; inset: 0; transition: box-shadow .2s ease; }
+.storyCard:hover .storyGlow { box-shadow: inset 0 0 0 1px rgba(215,180,106,.5); }
+.storyContent { position: absolute; z-index: 2; left: 2rem; right: 2rem; bottom: 2rem; }
+.storyStatus { color: var(--gold); font-family: system-ui,sans-serif; font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; }
+.storyContent h3 { margin: .7rem 0 0; font-size: clamp(2.6rem,4vw,4.5rem); font-weight: 400; line-height: 1; }
+.storySubtitle { color: #ded6c7; margin: .65rem 0 0; font-size: 1.05rem; }
+.storyNote { min-height: 3.2rem; margin: 1rem 0 0; color: var(--muted); font-family: system-ui,sans-serif; line-height: 1.6; font-size: .88rem; }
+.enter { display: inline-block; margin-top: 1.4rem; color: var(--gold); font-family: system-ui,sans-serif; font-size: .82rem; }
+
+footer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #77736d;
+  font-family: system-ui,sans-serif;
+  font-size: .78rem;
+}
+
+.storyPage { min-height: 100vh; padding: 2rem 1.5rem 6rem; max-width: 980px; margin: 0 auto; }
+.back { display: inline-block; color: var(--gold); font-family: system-ui,sans-serif; font-size: .82rem; margin-bottom: 5rem; }
+.storyHero { padding: 5rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.storyHero h1 { font-size: clamp(4rem,11vw,8rem); font-weight: 400; margin: 0; }
+.storyHero h2 { margin: .8rem 0 0; color: var(--gold); font-weight: 400; font-size: clamp(1.2rem,2.5vw,2rem); }
+.storyHero p { max-width: 44rem; margin: 2rem 0 0; color: var(--muted); line-height: 1.8; font-family: system-ui,sans-serif; }
+.coming { margin-top: 3rem; color: #d8d2c6; }
+
+@media (max-width: 900px) {
+  .storyGrid { grid-template-columns: 1fr; }
+  .storyCard { min-height: 28rem; }
+  footer { flex-direction: column; }
+}
