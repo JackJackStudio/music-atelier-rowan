@@ -308,3 +308,184 @@ footer strong { color: #b9b0a4; font-weight: 500; }
   .storyLogo { max-height: 9rem; }
   .storyContent { left: 1.4rem; right: 1.4rem; bottom: 1.5rem; }
 }
+
+
+/* Aurelia world section */
+.aureliaPage {
+  min-height: 100vh;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 2rem clamp(1rem, 4vw, 4rem) 6rem;
+}
+.aureliaTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 1.5rem;
+}
+.aureliaTop .back { margin: 0; }
+.aureliaWordmark {
+  width: min(360px, 48vw);
+  max-height: 105px;
+  object-fit: contain;
+}
+.aureliaTabs {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  border-top: 1px solid rgba(220,182,95,.20);
+  border-bottom: 1px solid rgba(220,182,95,.20);
+  background: rgba(5,7,11,.92);
+  backdrop-filter: blur(12px);
+}
+.aureliaTabs a {
+  padding: 1rem .8rem;
+  text-align: center;
+  color: #a9a49b;
+  font: .76rem system-ui,sans-serif;
+  letter-spacing: .07em;
+  border-right: 1px solid rgba(255,255,255,.05);
+}
+.aureliaTabs a:last-child { border-right: 0; }
+.aureliaTabs a:hover,
+.aureliaTabs a.active {
+  color: var(--gold-soft);
+  background: rgba(220,182,95,.06);
+}
+.aureliaTabs a.active {
+  box-shadow: inset 0 -2px 0 var(--gold);
+}
+.aureliaKingdomHero {
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: clamp(2rem,5vw,5rem);
+  align-items: center;
+  padding: 4rem 0 5rem;
+}
+.aureliaKingdomArt {
+  min-height: 540px;
+  border: 1px solid rgba(220,182,95,.18);
+  background:
+    radial-gradient(circle at 62% 25%, rgba(224,207,164,.28), transparent 22%),
+    linear-gradient(160deg,#263953 0%,#162338 44%,#0a101a 100%);
+  position: relative;
+  overflow: hidden;
+}
+.aureliaKingdomArt::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 54%, rgba(3,6,12,.72)),
+    radial-gradient(ellipse at 60% 55%, rgba(218,231,248,.12), transparent 30%);
+}
+.aureliaKingdomArtLabel {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  color: rgba(244,239,229,.75);
+  font-size: clamp(1.8rem,4vw,3.8rem);
+}
+.aureliaKingdomIntro h1,
+.aureliaCharacterHero h1,
+.aureliaEpisodeHeader h1 {
+  margin: .7rem 0 0;
+  font-size: clamp(3.4rem,7vw,7rem);
+  font-weight: 400;
+  line-height: .94;
+}
+.aureliaLead {
+  margin: 1.5rem 0 0;
+  color: #e5ddcf;
+  font: 1.05rem/1.8 system-ui,sans-serif;
+}
+.aureliaKingdomIntro > p:not(.aureliaLead),
+.aureliaCharacterHero > p:not(.aureliaLead) {
+  color: var(--muted);
+  font: .95rem/1.8 system-ui,sans-serif;
+}
+.aureliaDetails {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 1rem;
+  margin: 0 0 3rem;
+}
+.aureliaDetails article {
+  padding: clamp(1.6rem,3vw,3rem);
+  border: 1px solid rgba(220,182,95,.16);
+  background: linear-gradient(145deg,rgba(24,34,52,.68),rgba(8,13,21,.92));
+}
+.aureliaDetails h2 {
+  margin: .6rem 0 0;
+  font-size: clamp(1.6rem,3vw,2.7rem);
+  font-weight: 400;
+}
+.aureliaDetails p {
+  color: var(--muted);
+  font: .92rem/1.8 system-ui,sans-serif;
+}
+.aureliaCharacterHero,
+.aureliaEpisodeHeader {
+  max-width: 900px;
+  padding: 5rem 0 4rem;
+}
+.aureliaTrackList {
+  border-top: 1px solid rgba(220,182,95,.18);
+}
+.aureliaTrack {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 2rem;
+  padding: 2.2rem 0;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.trackNumber {
+  color: var(--gold);
+  font-size: 2.2rem;
+  line-height: 1;
+}
+.aureliaTrack h2 {
+  margin: 0;
+  font-size: clamp(1.5rem,3vw,2.5rem);
+  font-weight: 400;
+}
+.aureliaTrack p {
+  max-width: 850px;
+  margin: .75rem 0 0;
+  color: var(--muted);
+  font: .92rem/1.75 system-ui,sans-serif;
+}
+.aureliaNext {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 2.5rem;
+}
+.aureliaNext a {
+  padding: .85rem 1.2rem;
+  border: 1px solid rgba(220,182,95,.36);
+  color: var(--gold-soft);
+  font: .8rem system-ui,sans-serif;
+}
+.aureliaNext a:hover {
+  border-color: var(--gold);
+  background: rgba(220,182,95,.06);
+}
+@media (max-width: 800px) {
+  .aureliaTop { align-items: flex-start; }
+  .aureliaTabs {
+    grid-template-columns: 1fr 1fr;
+    position: static;
+  }
+  .aureliaKingdomHero { grid-template-columns: 1fr; }
+  .aureliaKingdomArt { min-height: 360px; }
+  .aureliaDetails { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .aureliaTop { flex-direction: column; }
+  .aureliaWordmark { width: min(320px, 85vw); }
+  .aureliaTabs { grid-template-columns: 1fr; }
+  .aureliaTrack { grid-template-columns: 52px 1fr; gap: 1rem; }
+}
