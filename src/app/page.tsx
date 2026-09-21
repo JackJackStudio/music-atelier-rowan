@@ -24,8 +24,8 @@ export default function Home() {
       <nav className="siteNav">
         <a className="brandMark" href="#top" aria-label="Music Atelier Rowan home">
           <picture>
-            <source media="(max-width: 700px)" srcSet="/brand/mar-emblem.webp" />
-            <img className="headerLogo" src="/brand/mar-header-logo.webp" alt="Music Atelier Rowan" />
+            <source media="(max-width: 700px)" srcSet="/brand/mar-emblem.png" />
+            <img className="headerLogo" src="/brand/mar-header-logo.png" alt="Music Atelier Rowan" />
           </picture>
         </a>
         <div className="navLinks">
@@ -71,14 +71,33 @@ export default function Home() {
 
       <section className="atelier" id="about">
         <div className="atelierFrame">
-          <div>
-            <span className="sectionKicker">Inside the Atelier</span>
+          <div className="atelierIntro">
+            <span className="sectionKicker">About Music Atelier Rowan</span>
             <h2>Where music becomes a world.</h2>
           </div>
-          <p>
-            M.A.R. is a home for original music, imagined kingdoms, forgotten memories, and stories told without words.
-            Each album is designed as a place to enter — not only a collection of tracks.
-          </p>
+
+          <div className="atelierCopy">
+            <p>
+              Music Atelier Rowan is a home for original music, imagined worlds, and stories told without words.
+              Here, fantasy kingdoms, distant planets, forgotten memories, and quiet human moments are brought to life
+              through cinematic music and visual storytelling.
+            </p>
+            <p>
+              Each album is more than a collection of tracks — it is a journey, a setting, and a story waiting to unfold.
+              From orchestral fantasy to atmospheric soundscapes, every project is created with one idea at its heart:
+              <strong> Stories, Told Through Music.</strong>
+            </p>
+          </div>
+
+          <div className="listenerNote">
+            <span className="listenerNoteLabel">Listen. Imagine. Discover.</span>
+            <p>
+              We hope you enjoy the freedom of listening first and letting the music create its own images, places, and
+              stories in your imagination. If you would like to go deeper, the original story settings behind each project
+              are here on this site — waiting for you to discover them.
+            </p>
+            <a href="#stories">Explore the original story settings →</a>
+          </div>
         </div>
       </section>
 
