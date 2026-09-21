@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "M.A.R. — Music Atelier Rowan",
-  description: "Original music, imagined worlds, and stories told through cinematic music and visual storytelling.",
+  description: "Original music, imagined worlds, and stories told through cinematic music and visual storytelling. Listen first, imagine freely, then discover the original story settings behind each project.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
