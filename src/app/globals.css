@@ -507,3 +507,54 @@ footer strong { color: #b9b0a4; font-weight: 500; }
     grid-template-columns: 1fr;
   }
 }
+
+
+.aureliaStoryChapters {
+  display: grid;
+  gap: 1.25rem;
+}
+.aureliaStoryChapter {
+  padding: clamp(1.5rem, 3vw, 3rem);
+  border: 1px solid rgba(220,182,95,.14);
+  background: linear-gradient(145deg, rgba(18,27,42,.72), rgba(7,11,18,.94));
+}
+.aureliaStoryChapterHead {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 2rem;
+  align-items: start;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+.aureliaStoryChapterHead h2 {
+  margin: 0;
+  font-size: clamp(1.8rem,3vw,3rem);
+  font-weight: 400;
+}
+.chapterSummary {
+  max-width: 850px;
+  margin: .7rem 0 0;
+  color: #d8d0c3;
+  font: .95rem/1.7 system-ui,sans-serif;
+}
+.chapterStory {
+  max-width: 900px;
+  margin: 1.8rem 0 0 7.6rem;
+}
+.chapterStory p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font: .96rem/1.82 system-ui,sans-serif;
+}
+.chapterStory p:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 700px) {
+  .aureliaStoryChapterHead {
+    grid-template-columns: 52px 1fr;
+    gap: 1rem;
+  }
+  .chapterStory {
+    margin-left: 0;
+  }
+}
