@@ -360,34 +360,23 @@ footer strong { color: #b9b0a4; font-weight: 500; }
 }
 .aureliaKingdomHero {
   display: grid;
-  grid-template-columns: 1.25fr .75fr;
+  grid-template-columns: 1.6fr 1fr;
   gap: clamp(2rem,5vw,5rem);
   align-items: center;
   padding: 4rem 0 5rem;
 }
 .aureliaKingdomArt {
-  min-height: 540px;
-  border: 1px solid rgba(220,182,95,.18);
-  background:
-    radial-gradient(circle at 62% 25%, rgba(224,207,164,.28), transparent 22%),
-    linear-gradient(160deg,#263953 0%,#162338 44%,#0a101a 100%);
   position: relative;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
+  border: 1px solid rgba(220,182,95,.18);
+  background: #0b111b;
 }
-.aureliaKingdomArt::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg, transparent 54%, rgba(3,6,12,.72)),
-    radial-gradient(ellipse at 60% 55%, rgba(218,231,248,.12), transparent 30%);
-}
-.aureliaKingdomArtLabel {
-  position: absolute;
-  left: 2rem;
-  bottom: 2rem;
-  color: rgba(244,239,229,.75);
-  font-size: clamp(1.8rem,4vw,3.8rem);
+.aureliaKingdomArt img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .aureliaKingdomIntro h1,
 .aureliaCharacterHero h1,
@@ -480,7 +469,7 @@ footer strong { color: #b9b0a4; font-weight: 500; }
     position: static;
   }
   .aureliaKingdomHero { grid-template-columns: 1fr; }
-  .aureliaKingdomArt { min-height: 360px; }
+  .aureliaKingdomArt { min-height: 0; }
   .aureliaDetails { grid-template-columns: 1fr; }
 }
 @media (max-width: 520px) {
