@@ -11,13 +11,18 @@ export default function JessaraPage() {
 
       <AureliaNav active="jessara" />
 
-      <section className="aureliaCharacterHero">
-        <span className="sectionKicker">Princess of Aurelia</span>
-        <h1>Jessara</h1>
-        <p className="aureliaLead">
-          A protected child, a curious young princess, a daughter who loses her father, and eventually a queen who must
-          learn to carry a kingdom before she feels ready.
-        </p>
+      <section className="aureliaCharacterHero aureliaCharacterSplit">
+        <div className="aureliaCharacterArt">
+          <img src="/images/Jessara.png" alt="Princess Jessara of Aurelia in the palace garden" />
+        </div>
+        <div className="aureliaCharacterIntro">
+          <span className="sectionKicker">Princess of Aurelia</span>
+          <h1>Jessara</h1>
+          <p className="aureliaLead">
+            A protected child, a curious young princess, a daughter who loses her father, and eventually a queen who must
+            learn to carry a kingdom before she feels ready.
+          </p>
+        </div>
       </section>
 
       <section className="aureliaDetails">
