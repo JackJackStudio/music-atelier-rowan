@@ -12,8 +12,11 @@ export default function AureliaPage() {
       <AureliaNav active="kingdom" />
 
       <section className="aureliaKingdomHero">
-        <div className="aureliaKingdomArt" aria-label="Kingdom Aurelia landscape placeholder">
-          <div className="aureliaKingdomArtLabel">Kingdom Aurelia</div>
+        <div className="aureliaKingdomArt">
+          <img
+            src="/images/Aurelia-kingdom.png"
+            alt="The white-stone mountain kingdom of Aurelia"
+          />
         </div>
         <div className="aureliaKingdomIntro">
           <span className="sectionKicker">The First Kingdom of Triveria</span>
