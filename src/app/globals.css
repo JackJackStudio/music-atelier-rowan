@@ -207,9 +207,8 @@ a { color: inherit; text-decoration: none; }
 }
 .atelierFrame {
   display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 4rem;
-  align-items: end;
+  grid-template-columns: .95fr 1.05fr;
+  gap: 3rem 5rem;
   min-height: 25rem;
   padding: clamp(2rem,5vw,5rem);
   border: 1px solid rgba(220,182,95,.18);
@@ -217,16 +216,54 @@ a { color: inherit; text-decoration: none; }
     radial-gradient(circle at 82% 30%, rgba(43,92,139,.20), transparent 22rem),
     linear-gradient(135deg,#151e2d,#0b1018 48%,#111a13);
 }
+.atelierIntro {
+  align-self: start;
+}
 .atelierFrame h2 {
   margin: .8rem 0 0;
   font-size: clamp(2.5rem,5vw,5.2rem);
   line-height: .98;
   font-weight: 400;
 }
-.atelierFrame p {
+.atelierCopy {
+  align-self: start;
+}
+.atelierCopy p,
+.listenerNote p {
   margin: 0;
   color: #bbb2a4;
   font: .96rem/1.8 system-ui,sans-serif;
+}
+.atelierCopy p + p {
+  margin-top: 1.15rem;
+}
+.atelierCopy strong {
+  color: var(--gold-soft);
+  font-weight: 600;
+}
+.listenerNote {
+  grid-column: 1 / -1;
+  margin-top: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(220,182,95,.18);
+  display: grid;
+  grid-template-columns: .6fr 1.5fr auto;
+  gap: 1.5rem 2rem;
+  align-items: start;
+}
+.listenerNoteLabel {
+  color: var(--gold);
+  font: .72rem system-ui,sans-serif;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.listenerNote a {
+  color: var(--gold-soft);
+  font: .82rem/1.5 system-ui,sans-serif;
+  white-space: nowrap;
+}
+.listenerNote a:hover {
+  color: #fff0bf;
 }
 
 footer {
@@ -260,6 +297,7 @@ footer strong { color: #b9b0a4; font-weight: 500; }
   .storyGrid { grid-template-columns: 1fr; }
   .storyCard { min-height: 31rem; }
   .atelierFrame { grid-template-columns: 1fr; gap: 2rem; }
+  .listenerNote { grid-template-columns: 1fr; }
   footer { flex-direction: column; }
 }
 @media (max-width: 600px) {
