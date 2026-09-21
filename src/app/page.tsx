@@ -54,14 +54,11 @@ export default function Home() {
         </div>
 
         <div className="heroContent">
-          <div className="crest" aria-hidden="true">
-            <div className="crestRing">
-              <span>MAR</span>
-            </div>
+          <div className="heroLogoLockup">
+            <div className="eyebrow">M.A.R.</div>
+            <h1>Music Atelier Rowan</h1>
+            <p className="tagline">Stories, Told Through Music.</p>
           </div>
-          <div className="eyebrow">M.A.R.</div>
-          <h1>Music Atelier Rowan</h1>
-          <p className="tagline">Stories, Told Through Music.</p>
           <p className="intro">
             Original music, imagined worlds, and cinematic stories shaped like pages from a forgotten fantasy book.
           </p>
@@ -87,8 +84,12 @@ export default function Home() {
               aria-label={`Enter ${story.title}`}
             >
               <div className="storyAtmosphere" />
-              <div className="storySigil" aria-hidden="true">
-                <span>{story.title.charAt(0)}</span>
+              <div className="storyLogoWrap">
+                <img
+                  className="storyLogo"
+                  src={`/logos/${story.slug}-logo.webp`}
+                  alt={`${story.title} — ${story.subtitle}`}
+                />
               </div>
               <div className="storyContent">
                 <span className="storyStatus">{story.status}</span>
