@@ -23,8 +23,10 @@ export default function Home() {
     <main>
       <nav className="siteNav">
         <a className="brandMark" href="#top" aria-label="Music Atelier Rowan home">
-          <span className="brandSeal">MAR</span>
-          <span className="brandName">Music Atelier Rowan</span>
+          <picture>
+            <source media="(max-width: 700px)" srcSet="/brand/mar-emblem.webp" />
+            <img className="headerLogo" src="/brand/mar-header-logo.webp" alt="Music Atelier Rowan" />
+          </picture>
         </a>
         <div className="navLinks">
           <a href="#stories">Worlds</a>
