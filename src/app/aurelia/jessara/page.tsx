@@ -52,8 +52,7 @@ export default function JessaraPage() {
           <span className="sectionKicker">The Knight</span>
           <h2>A childhood companion at the front.</h2>
           <p>
-            Jessara's childhood friend grows into one of Aurelia's most important knights and military commanders. After
-            losing her father, his repeated returns to the battlefield make the war deeply personal. The fear of losing
+            Jessara's childhood friend grows into one of Aurelia's most important knights and military commanders. After losing her father, Cedric's repeated returns to the battlefield make the war deeply personal. The fear of losing
             another person she loves becomes one of the emotional threads running through the second half of the story.
           </p>
         </article>
