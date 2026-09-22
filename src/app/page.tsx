@@ -33,6 +33,7 @@ export default function Home() {
           <Link href="/triveria/">Triveria</Link>
           <a href="#about">About</a>
           <Link href="/zh/">中文</Link>
+          <Link href="/ja/">日本語</Link>
         </div>
       </nav>
 
