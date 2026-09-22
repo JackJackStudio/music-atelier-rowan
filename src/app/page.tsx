@@ -62,14 +62,17 @@ export default function Home() {
               <div className="storyContent">
                 <span className="storyStatus">{story.status}</span>
                 <p className="storyNote">{story.note}</p>
-                <span className="storyActions">
-                  <Link className="enter" href={`/${story.slug}/`}> Enter story →</Link>
-                  {story.slug === "aurelia" && (
-                    <a className="storyListen" href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer">▶ Listen on YouTube</a>
-                  )}
-                </span>
+                <Link className="enter" href={`/${story.slug}/`}> Enter story →</Link>
               </div>
             </div>
+            {story.slug === "aurelia" && (
+              <div className="storyMusicLinks">
+                <a href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer">
+                  <span>▶</span> Story Music — Episode 01–06
+                </a>
+              </div>
+            )}
+          </div>
           ))}
         </div>
       </section>
