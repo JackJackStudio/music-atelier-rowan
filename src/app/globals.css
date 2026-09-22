@@ -558,3 +558,18 @@ footer strong { color: #b9b0a4; font-weight: 500; }
     margin-left: 0;
   }
 }
+
+.languageLink {
+  display: inline-block;
+  margin-top: .45rem;
+  color: #9d978e;
+  font: .72rem system-ui,sans-serif;
+  letter-spacing: .08em;
+}
+.languageLink:hover { color: var(--gold-soft); }
+.chapterZhTitle {
+  margin: .28rem 0 0;
+  color: var(--gold-soft);
+  font: 400 1rem/1.5 system-ui,sans-serif;
+  letter-spacing: .06em;
+}
