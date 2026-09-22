@@ -102,6 +102,12 @@ export default function EpisodeOnePage() {
 
       <AureliaNav active="episode-1" />
 
+      <a className="episodeMusicBanner" href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer">
+        <span className="episodeMusicIcon">▶</span>
+        <span><strong>Listen to Episode I</strong><small>Open the soundtrack on YouTube and let the music accompany you as you read.</small></span>
+        <em>YouTube ↗</em>
+      </a>
+
       <section className="aureliaEpisodeHeader">
         <span className="sectionKicker">Episode I · Tracks 01–06</span>
         <h1>The Princess Becomes a Queen</h1>
