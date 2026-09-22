@@ -40,11 +40,9 @@ export default function ZhHome() {
 
         <div className="storyGrid">
           {stories.map((story) => (
-            <Link
+            <div
               className={`storyCard ${story.slug}`}
-              href={story.slug === "aurelia" ? "/zh/aurelia/" : `/${story.slug}/`}
               key={story.slug}
-              aria-label={`進入 ${story.slug}`}
             >
               <div className="storyLogoArea">
                 <img className="storyLogo" src={`/logos/${story.slug}-logo.webp`} alt="" />
@@ -52,9 +50,14 @@ export default function ZhHome() {
               <div className="storyContent">
                 <span className="storyStatus">{story.status}</span>
                 <p className="storyNote">{story.note}</p>
-                <span className="enter">進入故事 →</span>
+                <span className="storyActions">
+                  <Link className="enter" href={story.slug === "aurelia" ? "/zh/aurelia/" : `/${story.slug}/`}> 進入故事 →</Link>
+                  {story.slug === "aurelia" && (
+                    <a className="storyListen" href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer">▶ 聆聽配樂</a>
+                  )}
+                </span>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </section>
