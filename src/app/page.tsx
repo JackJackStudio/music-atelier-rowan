@@ -52,11 +52,9 @@ export default function Home() {
 
         <div className="storyGrid">
           {stories.map((story) => (
-            <Link
+            <div
               className={`storyCard ${story.slug}`}
-              href={`/${story.slug}/`}
               key={story.slug}
-              aria-label={`Enter ${story.slug}`}
             >
               <div className="storyLogoArea">
                 <img className="storyLogo" src={`/logos/${story.slug}-logo.webp`} alt="" />
@@ -64,9 +62,14 @@ export default function Home() {
               <div className="storyContent">
                 <span className="storyStatus">{story.status}</span>
                 <p className="storyNote">{story.note}</p>
-                <span className="enter">Enter story →</span>
+                <span className="storyActions">
+                  <Link className="enter" href={`/${story.slug}/`}> Enter story →</Link>
+                  {story.slug === "aurelia" && (
+                    <a className="storyListen" href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer">▶ Listen on YouTube</a>
+                  )}
+                </span>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </section>
