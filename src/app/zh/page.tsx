@@ -18,7 +18,7 @@ export default function ZhHome() {
         </a>
         <div className="navLinks">
           <a href="#stories">世界</a>
-          <Link href="/triveria/">Triveria</Link>
+          <Link href="/zh/triveria/">Triveria</Link>
           <a href="#about">關於</a>
           <Link href="/">EN</Link>
           <Link href="/ja/">日本語</Link>
