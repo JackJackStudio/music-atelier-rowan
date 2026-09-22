@@ -40,27 +40,25 @@ export default function JaHome() {
 
         <div className="storyGrid">
           {stories.map((story) => (
-            <div
-              className={`storyCard ${story.slug}`}
-              key={story.slug}
-            >
-              <div className="storyLogoArea">
-                <img className="storyLogo" src={`/logos/${story.slug}-logo.webp`} alt="" />
+            <div className="storyItem" key={story.slug}>
+              <div className={`storyCard ${story.slug}`}>
+                <div className="storyLogoArea">
+                  <img className="storyLogo" src={`/logos/${story.slug}-logo.webp`} alt="" />
+                </div>
+                <div className="storyContent">
+                  <span className="storyStatus">{story.status}</span>
+                  <p className="storyNote">{story.note}</p>
+                  <Link className="enter" href={story.slug === "aurelia" ? "/ja/aurelia/" : `/${story.slug}/`}>物語へ →</Link>
+                </div>
               </div>
-              <div className="storyContent">
-                <span className="storyStatus">{story.status}</span>
-                <p className="storyNote">{story.note}</p>
-                <Link className="enter" href={story.slug === "aurelia" ? "/ja/aurelia/" : `/${story.slug}/`}> 物語へ →</Link>
-              </div>
+              {story.slug === "aurelia" && (
+                <div className="storyMusicLinks">
+                  <a href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer">
+                    <span>▶</span> ストーリー音楽 — Episode 01–06
+                  </a>
+                </div>
+              )}
             </div>
-            {story.slug === "aurelia" && (
-              <div className="storyMusicLinks">
-                <a href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer">
-                  <span>▶</span> ストーリー音楽 — Episode 01–06
-                </a>
-              </div>
-            )}
-          </div>
           ))}
         </div>
       </section>
