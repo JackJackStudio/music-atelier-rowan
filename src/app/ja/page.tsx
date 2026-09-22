@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AnalyticsLink from "../AnalyticsLink";
 
 const stories = [
   { slug: "aurelia", note: "ひとりの姫。ひとつの王冠。戦火に包まれる王国。", status: "12 Tracks" },
@@ -41,7 +42,7 @@ export default function JaHome() {
         <div className="storyGrid">
           {stories.map((story) => (
             <div className="storyItem" key={story.slug}>
-              <Link className={`storyCard ${story.slug}`} href={story.slug === "aurelia" ? "/ja/aurelia/" : `/${story.slug}/`} aria-label={`物語へ: ${story.slug}`}>
+              <AnalyticsLink className={`storyCard ${story.slug}`} href={story.slug === "aurelia" ? "/ja/aurelia/" : `/${story.slug}/`} ariaLabel={`物語へ: ${story.slug}`} eventName="enter_story" params={{ kingdom: story.slug, language: "ja", source: "homepage" }}>
                 <div className="storyLogoArea">
                   <img className="storyLogo" src={`/logos/${story.slug}-logo.webp`} alt="" />
                 </div>
@@ -50,12 +51,12 @@ export default function JaHome() {
                   <p className="storyNote">{story.note}</p>
                   <span className="enter">物語へ →</span>
                 </div>
-              </Link>
+              </AnalyticsLink>
               {story.slug === "aurelia" && (
                 <div className="storyMusicLinks">
-                  <a href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer">
+                  <AnalyticsLink href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer" eventName="listen_soundtrack" params={{ kingdom: "aurelia", episode: 1, tracks: "01-06", language: "ja", source: "homepage", platform: "youtube" }}>
                     <span>▶</span> ストーリー音楽 — Episode 01–06
-                  </a>
+                  </AnalyticsLink>
                 </div>
               )}
             </div>
