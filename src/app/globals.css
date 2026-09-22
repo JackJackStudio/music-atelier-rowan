@@ -688,3 +688,43 @@ footer strong { color: #b9b0a4; font-weight: 500; }
   .triveriaTop { align-items:flex-start; flex-direction:column; }
   .triveriaIntro h1 { font-size:clamp(4rem,22vw,7rem); }
 }
+
+
+/* Story soundtrack links */
+.episodeMusicBanner {
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:1rem;
+  align-items:center;
+  margin:2rem 0 0;
+  padding:1.1rem 1.25rem;
+  border:1px solid rgba(220,182,95,.34);
+  background:linear-gradient(90deg,rgba(220,182,95,.11),rgba(15,18,23,.78));
+  transition:border-color .2s ease,transform .2s ease,background .2s ease;
+}
+.episodeMusicBanner:hover {
+  transform:translateY(-2px);
+  border-color:rgba(220,182,95,.7);
+  background:linear-gradient(90deg,rgba(220,182,95,.16),rgba(15,18,23,.9));
+}
+.episodeMusicIcon {
+  display:grid; place-items:center; width:2.6rem; height:2.6rem;
+  border:1px solid rgba(220,182,95,.5); border-radius:50%; color:var(--gold-soft);
+  font:.8rem system-ui,sans-serif;
+}
+.episodeMusicBanner strong { display:block; color:#f3ead9; font:1rem system-ui,sans-serif; font-weight:600; }
+.episodeMusicBanner small { display:block; margin-top:.28rem; color:#999289; font:.78rem/1.5 system-ui,sans-serif; }
+.episodeMusicBanner em { color:var(--gold); font:.72rem system-ui,sans-serif; font-style:normal; letter-spacing:.08em; white-space:nowrap; }
+
+.storyActions { display:flex; flex-wrap:wrap; align-items:center; gap:.7rem 1.1rem; margin-top:1.2rem; }
+.storyActions .enter { margin-top:0; }
+.storyListen {
+  display:inline-block; padding:.48rem .72rem; border:1px solid rgba(220,182,95,.35);
+  color:var(--gold-soft); font:.72rem system-ui,sans-serif; letter-spacing:.02em;
+}
+.storyListen:hover { border-color:var(--gold); background:rgba(220,182,95,.08); }
+
+@media (max-width:600px) {
+  .episodeMusicBanner { grid-template-columns:auto 1fr; }
+  .episodeMusicBanner em { grid-column:2; }
+}
