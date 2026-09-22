@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AnalyticsLink from "../AnalyticsLink";
 
 const stories = [
   { slug: "aurelia", note: "一位公主。一頂王冠。一個陷入戰火的王國。", status: "12 首樂曲" },
@@ -41,7 +42,7 @@ export default function ZhHome() {
         <div className="storyGrid">
           {stories.map((story) => (
             <div className="storyItem" key={story.slug}>
-              <Link className={`storyCard ${story.slug}`} href={story.slug === "aurelia" ? "/zh/aurelia/" : `/${story.slug}/`} aria-label={`進入故事: ${story.slug}`}>
+              <AnalyticsLink className={`storyCard ${story.slug}`} href={story.slug === "aurelia" ? "/zh/aurelia/" : `/${story.slug}/`} ariaLabel={`進入故事: ${story.slug}`} eventName="enter_story" params={{ kingdom: story.slug, language: "zh", source: "homepage" }}>
                 <div className="storyLogoArea">
                   <img className="storyLogo" src={`/logos/${story.slug}-logo.webp`} alt="" />
                 </div>
@@ -50,12 +51,12 @@ export default function ZhHome() {
                   <p className="storyNote">{story.note}</p>
                   <span className="enter">進入故事 →</span>
                 </div>
-              </Link>
+              </AnalyticsLink>
               {story.slug === "aurelia" && (
                 <div className="storyMusicLinks">
-                  <a href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer">
+                  <AnalyticsLink href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer" eventName="listen_soundtrack" params={{ kingdom: "aurelia", episode: 1, tracks: "01-06", language: "zh", source: "homepage", platform: "youtube" }}>
                     <span>▶</span> 故事配樂 — Episode 01–06
-                  </a>
+                  </AnalyticsLink>
                 </div>
               )}
             </div>
