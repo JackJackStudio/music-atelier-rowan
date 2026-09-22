@@ -728,3 +728,38 @@ footer strong { color: #b9b0a4; font-weight: 500; }
   .episodeMusicBanner { grid-template-columns:auto 1fr; }
   .episodeMusicBanner em { grid-column:2; }
 }
+
+
+/* Homepage story card + soundtrack layout */
+.storyGrid > div {
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+}
+.storyCard {
+  width:100%;
+  min-height:30rem;
+}
+.storyMusicLinks {
+  min-height:3.8rem;
+  padding:.85rem .25rem 0;
+}
+.storyMusicLinks a {
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;
+  color:var(--gold-soft);
+  font:.76rem system-ui,sans-serif;
+  letter-spacing:.04em;
+  transition:color .2s ease,transform .2s ease;
+}
+.storyMusicLinks a:hover {
+  color:#fff0bf;
+  transform:translateX(2px);
+}
+.storyMusicLinks a span {
+  font-size:.68rem;
+}
+@media (max-width:960px) {
+  .storyCard { min-height:27rem; }
+}
