@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ZhAureliaNav from "../ZhAureliaNav";
+import AnalyticsLink from "../../../AnalyticsLink";
 
 const tracks = [
   { number:"01", title:"Once Upon a Morning", zhTitle:"從前的一個早晨", summary:"王宮花園裡一個無憂無慮的清晨，成為 Jessara 一生都不會忘記的記憶。", story:[
