@@ -7,7 +7,10 @@ export default function AureliaPage() {
       <header className="aureliaTop">
         <div>
           <Link className="back" href="/">← Back to Music Atelier Rowan</Link>
-          <div><Link className="languageLink" href="/zh/aurelia/">中文</Link></div>
+          <div className="languageChoices">
+            <Link className="languageLink" href="/zh/aurelia/">中文</Link>
+            <Link className="languageLink" href="/ja/aurelia/">日本語</Link>
+          </div>
         </div>
         <img className="aureliaWordmark" src="/logos/aurelia-logo.webp" alt="Aurelia — The Princess and the Silver Wings" />
       </header>
