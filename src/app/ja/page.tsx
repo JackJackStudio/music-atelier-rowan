@@ -40,11 +40,9 @@ export default function JaHome() {
 
         <div className="storyGrid">
           {stories.map((story) => (
-            <Link
+            <div
               className={`storyCard ${story.slug}`}
-              href={story.slug === "aurelia" ? "/ja/aurelia/" : `/${story.slug}/`}
               key={story.slug}
-              aria-label={`${story.slug} の物語へ`}
             >
               <div className="storyLogoArea">
                 <img className="storyLogo" src={`/logos/${story.slug}-logo.webp`} alt="" />
@@ -52,9 +50,14 @@ export default function JaHome() {
               <div className="storyContent">
                 <span className="storyStatus">{story.status}</span>
                 <p className="storyNote">{story.note}</p>
-                <span className="enter">物語へ →</span>
+                <span className="storyActions">
+                  <Link className="enter" href={story.slug === "aurelia" ? "/ja/aurelia/" : `/${story.slug}/`}> 物語へ →</Link>
+                  {story.slug === "aurelia" && (
+                    <a className="storyListen" href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer">▶ 音楽を聴く</a>
+                  )}
+                </span>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </section>
