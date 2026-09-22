@@ -70,11 +70,11 @@ export default function ZhEpisodeOnePage() {
         <img className="aureliaWordmark" src="/logos/aurelia-logo.webp" alt="Aurelia — The Princess and the Silver Wings" />
       </header>
       <ZhAureliaNav active="episode-1" />
-      <a className="episodeMusicBanner" href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer">
+      <AnalyticsLink className="episodeMusicBanner" href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer" eventName="listen_soundtrack" params={{ kingdom: "aurelia", episode: 1, tracks: "01-06", language: "zh", source: "episode_page", platform: "youtube" }}>
         <span className="episodeMusicIcon">▶</span>
         <span><strong>聆聽第一章配樂</strong><small>在 YouTube 開啟配樂，讓音樂陪你一起閱讀這段故事。</small></span>
         <em>YouTube ↗</em>
-      </a>
+      </AnalyticsLink>
 
       <section className="aureliaEpisodeHeader">
         <span className="sectionKicker">第一章 · Tracks 01–06</span>
