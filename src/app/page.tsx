@@ -32,6 +32,7 @@ export default function Home() {
           <a href="#stories">Worlds</a>
           <Link href="/triveria/">Triveria</Link>
           <a href="#about">About</a>
+          <Link href="/zh/">中文</Link>
         </div>
       </nav>
 
