@@ -3,7 +3,7 @@ import AureliaNav from "./AureliaNav";
 
 export default function AureliaPage() {
   return (
-    <main className="aureliaPage">
+    <main className="aureliaPage kingdomPage aureliaRealm">
       <header className="aureliaTop">
         <div>
           <Link className="back" href="/">← Back to Music Atelier Rowan</Link>
@@ -19,51 +19,35 @@ export default function AureliaPage() {
 
       <section className="aureliaKingdomHero">
         <div className="aureliaKingdomArt">
-          <img
-            src="/images/Aurelia-kingdom.png"
-            alt="The white-stone mountain kingdom of Aurelia"
-          />
+          <img src="/images/Aurelia-kingdom.png" alt="The river kingdom of Aurelia" />
         </div>
         <div className="aureliaKingdomIntro">
           <span className="sectionKicker">The First Kingdom of Triveria</span>
           <h1>Kingdom Aurelia</h1>
           <p className="aureliaLead">
-            A luminous mountain kingdom of white stone, blue-and-gold banners, high bridges, waterfalls, and deep valleys.
-            Aurelia is beautiful, prosperous, and proud — but its peace will not last forever.
+            A river-bound kingdom of white stone, royal blue, and gold — shaped by craft, duty, and the belief that strength should serve the people.
           </p>
           <p>
-            The royal city rises above the valley beneath the central mountains of Triveria. White towers and terraces
-            catch the morning sun, while roads and bridges connect the palace to villages scattered through the valley below.
-            The kingdom's identity is elegant rather than severe: white stone, royal blue, warm gold, flowers, open skies,
-            and the sense of a realm that still believes tomorrow can be brighter.
+            Snowmelt from Triveria's central mountains feeds a dense network of rivers through Aurelia's valleys and towns.
+            Waterwheels, bridges, canals, and workshops grew along their banks, turning the kingdom into Triveria's great center of making and skilled craft.
           </p>
         </div>
       </section>
 
-      <section className="aureliaDetails">
-        <article>
-          <span className="sectionKicker">Royal Standard</span>
-          <h2>Blue, Gold, and the Crown</h2>
-          <p>
-            Aurelia's royal banner uses a deep royal-blue field with gold ornament. Its central mark combines the crown
-            with the fleur-de-lis motif seen throughout the palace, giving the kingdom a formal, graceful identity that is
-            immediately distinct from Brenalia's forest-green heraldry and Cazenia's burgundy-red palette.
-          </p>
-        </article>
-        <article>
-          <span className="sectionKicker">The Story Begins Here</span>
-          <h2>A peaceful morning before the war.</h2>
-          <p>
-            The story opens in this kingdom while Jessara is still a child. The castle gardens, her father, and the quiet
-            valley form the world she believes will always be there. Across twelve tracks, that certainty is tested by war,
-            loss, the crown, and the responsibility of protecting the home she once took for granted.
-          </p>
-        </article>
+      <section className="kingdomPillars">
+        <article><span className="sectionKicker">Land</span><h2>Rivers & Valleys</h2><p>Water defines Aurelia. Settlements follow the rivers, stone bridges bind the valleys together, and waterways carry people, materials, and finished goods across the realm.</p></article>
+        <article><span className="sectionKicker">Livelihood</span><h2>Workshops & Craft</h2><p>Mills, smithies, dyers, woodworkers, potters, and textile workshops flourish beside dependable water. Aurelia makes what much of Triveria uses.</p></article>
+        <article><span className="sectionKicker">Ideal</span><h2>Duty & Service</h2><p>Aurelian tradition prizes duty, honor, and service. Its knights embody a simple ideal: those with strength carry a responsibility to protect those without it.</p></article>
       </section>
 
-      <div className="aureliaNext">
-        <Link href="/aurelia/jessara/">Meet Princess Jessara →</Link>
-      </div>
+      <section className="kingdomQuote"><span>AURELIA</span><blockquote>“Aurelia makes what Triveria needs.”</blockquote></section>
+
+      <section className="aureliaDetails">
+        <article><span className="sectionKicker">Royal Standard</span><h2>Blue, Gold, and the Crown</h2><p>A deep royal-blue field and gold ornament represent the crown and the formal grace of the kingdom. The palette appears throughout its banners, halls, bridges, and ceremonial life.</p></article>
+        <article><span className="sectionKicker">The Crown</span><h2>Queen Jessara</h2><p>Jessara's story reflects Aurelia itself: responsibility before comfort, protection before glory. The crown she inherits is not simply authority — it is a promise to carry the kingdom through fear, loss, and war.</p></article>
+      </section>
+
+      <div className="aureliaNext"><Link href="/aurelia/jessara/">Meet Queen Jessara →</Link></div>
     </main>
   );
 }
