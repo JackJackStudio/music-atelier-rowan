@@ -70,11 +70,11 @@ export default function JaEpisodeOnePage() {
         <img className="aureliaWordmark" src="/logos/aurelia-logo.webp" alt="Aurelia — The Princess and the Silver Wings" />
       </header>
       <JaAureliaNav active="episode-1" />
-      <a className="episodeMusicBanner" href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer">
+      <AnalyticsLink className="episodeMusicBanner" href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer" eventName="listen_soundtrack" params={{ kingdom: "aurelia", episode: 1, tracks: "01-06", language: "ja", source: "episode_page", platform: "youtube" }}>
         <span className="episodeMusicIcon">▶</span>
         <span><strong>第一章の音楽を聴く</strong><small>YouTube でサウンドトラックを開き、音楽とともに物語をお楽しみください。</small></span>
         <em>YouTube ↗</em>
-      </a>
+      </AnalyticsLink>
 
       <section className="aureliaEpisodeHeader">
         <span className="sectionKicker">第一章 · Tracks 01–06</span>
