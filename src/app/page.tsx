@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AnalyticsLink from "./AnalyticsLink";
 
 const stories = [
   {
@@ -53,7 +54,7 @@ export default function Home() {
         <div className="storyGrid">
           {stories.map((story) => (
             <div className="storyItem" key={story.slug}>
-              <Link className={`storyCard ${story.slug}`} href={`/${story.slug}/`} aria-label={`Enter story: ${story.slug}`}>
+              <AnalyticsLink className={`storyCard ${story.slug}`} href={`/${story.slug}/`} ariaLabel={`Enter story: ${story.slug}`} eventName="enter_story" params={{ kingdom: story.slug, language: "en", source: "homepage" }}>
                 <div className="storyLogoArea">
                   <img className="storyLogo" src={`/logos/${story.slug}-logo.webp`} alt="" />
                 </div>
@@ -62,12 +63,12 @@ export default function Home() {
                   <p className="storyNote">{story.note}</p>
                   <span className="enter">Enter story →</span>
                 </div>
-              </Link>
+              </AnalyticsLink>
               {story.slug === "aurelia" && (
                 <div className="storyMusicLinks">
-                  <a href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer">
+                  <AnalyticsLink href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer" eventName="listen_soundtrack" params={{ kingdom: "aurelia", episode: 1, tracks: "01-06", language: "en", source: "homepage", platform: "youtube" }}>
                     <span>▶</span> Story Music — Episode 01–06
-                  </a>
+                  </AnalyticsLink>
                 </div>
               )}
             </div>
