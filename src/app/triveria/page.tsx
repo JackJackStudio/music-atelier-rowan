@@ -80,6 +80,12 @@ const places = [
     description:
       "A secluded lake surrounded by deep forest in northern Brenalia. Calm, remote, and strongly associated with moonlit folklore, it belongs to the quieter and more mysterious side of the forest kingdom.",
   },
+  {
+    name: "Redmarch",
+    region: "Eastern Cazenia",
+    description:
+      "Stretching across the eastern plains of Cazenia, Redmarch is one of the most productive agricultural regions in Triveria. Vast fields of grain, flax, cotton, and other crops extend toward the horizon, broken by irrigation channels, farming estates, granaries, and long roads carrying harvests toward the cities of the kingdom.",
+  },
 ];
 
 export default function TriveriaPage() {
