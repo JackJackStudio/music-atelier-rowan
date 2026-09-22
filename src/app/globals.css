@@ -573,3 +573,15 @@ footer strong { color: #b9b0a4; font-weight: 500; }
   font: 400 1rem/1.5 system-ui,sans-serif;
   letter-spacing: .06em;
 }
+
+.languageChoices {
+  display: flex;
+  gap: .9rem;
+  flex-wrap: wrap;
+}
+.chapterLocalTitle {
+  margin: .28rem 0 0;
+  color: var(--gold-soft);
+  font: 400 1rem/1.6 system-ui,sans-serif;
+  letter-spacing: .04em;
+}
