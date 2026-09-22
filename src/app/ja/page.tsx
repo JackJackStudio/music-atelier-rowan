@@ -18,7 +18,7 @@ export default function JaHome() {
         </a>
         <div className="navLinks">
           <a href="#stories">世界</a>
-          <Link href="/triveria/">Triveria</Link>
+          <Link href="/ja/triveria/">Triveria</Link>
           <a href="#about">About</a>
           <Link href="/">EN</Link>
           <Link href="/zh/">中文</Link>
