@@ -1,5 +1,6 @@
 import Link from "next/link";
 import JaAureliaNav from "../JaAureliaNav";
+import AnalyticsLink from "../../../AnalyticsLink";
 
 const tracks = [
   { number:"01", title:"Once Upon a Morning", jaTitle:"ある朝、むかしむかし", summary:"王宮の庭で過ごす何気ない幸せな朝が、Jessara の生涯に残る記憶になります。", story:[
