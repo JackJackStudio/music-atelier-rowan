@@ -109,7 +109,10 @@ export default function EpisodeTwoPage() {
   return (
     <main className="aureliaPage">
       <header className="aureliaTop">
-        <Link className="back" href="/">← Back to Music Atelier Rowan</Link>
+        <div>
+          <Link className="back" href="/">← Back to Music Atelier Rowan</Link>
+          <div><Link className="languageLink" href="/zh/aurelia/episode-2/">中文</Link></div>
+        </div>
         <img className="aureliaWordmark" src="/logos/aurelia-logo.webp" alt="Aurelia — The Princess and the Silver Wings" />
       </header>
 
