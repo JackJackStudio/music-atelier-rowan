@@ -585,3 +585,52 @@ footer strong { color: #b9b0a4; font-weight: 500; }
   font: 400 1rem/1.6 system-ui,sans-serif;
   letter-spacing: .04em;
 }
+
+
+/* Triveria kingdom introduction pages */
+.kingdomPage { --realm-accent: var(--gold); }
+.brenaliaRealm { --realm-accent: #9fc48b; }
+.cazeniaRealm { --realm-accent: #d29a78; }
+.realmTop {
+  display:flex; align-items:center; justify-content:space-between; gap:2rem;
+  min-height:90px; padding-bottom:1.5rem; border-bottom:1px solid var(--line);
+}
+.realmTop .back { margin:0; }
+.realmName {
+  color:var(--realm-accent); font-size:clamp(1.5rem,3vw,2.6rem);
+  letter-spacing:.18em; font-weight:400;
+}
+.kingdomPillars {
+  display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin:0 0 1rem;
+}
+.kingdomPillars article {
+  min-height:250px; padding:clamp(1.5rem,3vw,2.6rem);
+  border:1px solid rgba(220,182,95,.16);
+  background:linear-gradient(145deg,rgba(22,28,35,.72),rgba(7,10,14,.96));
+}
+.brenaliaRealm .kingdomPillars article { background:linear-gradient(145deg,rgba(22,48,31,.68),rgba(6,16,10,.95)); }
+.cazeniaRealm .kingdomPillars article { background:linear-gradient(145deg,rgba(62,29,25,.62),rgba(18,8,8,.96)); }
+.kingdomPillars h2 {
+  margin:.65rem 0 0; font-size:clamp(1.6rem,3vw,2.5rem); font-weight:400;
+}
+.kingdomPillars p {
+  margin:1rem 0 0; color:var(--muted); font:.92rem/1.8 system-ui,sans-serif;
+}
+.kingdomQuote {
+  margin:1rem 0 3rem; padding:clamp(2rem,5vw,4.5rem);
+  text-align:center; border:1px solid rgba(220,182,95,.16);
+  background:radial-gradient(circle at 50% 50%,rgba(220,182,95,.09),transparent 55%);
+}
+.kingdomQuote span {
+  color:var(--realm-accent); font:.68rem system-ui,sans-serif; letter-spacing:.28em;
+}
+.kingdomQuote blockquote {
+  margin:1rem auto 0; max-width:900px; font-size:clamp(2rem,4vw,4rem); line-height:1.12; font-weight:400;
+}
+.brenaliaRealm .sectionKicker, .brenaliaRealm .aureliaNext a { color:#9fc48b; }
+.cazeniaRealm .sectionKicker, .cazeniaRealm .aureliaNext a { color:#d29a78; }
+
+@media (max-width: 900px) {
+  .kingdomPillars { grid-template-columns:1fr; }
+  .realmTop { align-items:flex-start; flex-direction:column; padding-top:1rem; }
+}
