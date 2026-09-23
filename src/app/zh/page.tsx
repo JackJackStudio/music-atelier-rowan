@@ -42,7 +42,7 @@ export default function ZhHome() {
         <div className="storyGrid">
           {stories.map((story) => (
             <div className="storyItem" key={story.slug}>
-              <AnalyticsLink className={`storyCard ${story.slug}`} href={story.slug === "aurelia" ? "/zh/aurelia/" : `/${story.slug}/`} ariaLabel={`進入故事: ${story.slug}`} eventName="enter_story" params={{ kingdom: story.slug, language: "zh", source: "homepage" }}>
+              <AnalyticsLink className={`storyCard ${story.slug}`} href={`/zh/${story.slug}/`} ariaLabel={`進入故事: ${story.slug}`} eventName="enter_story" params={{ kingdom: story.slug, language: "zh", source: "homepage" }}>
                 <div className="storyLogoArea">
                   <img className="storyLogo" src={`/logos/${story.slug}-logo.webp`} alt="" />
                 </div>
