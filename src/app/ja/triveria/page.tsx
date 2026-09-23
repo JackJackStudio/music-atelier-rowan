@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const kingdoms=[
 {name:"Aurelia",href:"/ja/aurelia/",image:"/images/Aurelia-kingdom.png",role:"河川と工芸の王国",motto:"責務 · 工芸 · 奉仕",description:"白い石造都市と谷を縫う河川、その岸辺に広がる橋と工房。Aurelia は Triveria 各地の素材を品物へと変え、騎士道、責務、そして人々への奉仕という伝統を受け継いでいます。"},
-{name:"Brenalia",href:"/brenalia/",image:"/images/Brenalia-kingdom.png",role:"森と自然の王国",motto:"自然 · 自由 · 調和",description:"森、峡谷、山々に守られた Brenalia は、荒野と忘れられた過去に最も近い王国です。古代の遺跡はいまも深い森の下で眠っています。"},
-{name:"Cazenia",href:"/cazenia/",image:"/images/Cazenia-kingdom.png",role:"大平原の王国",motto:"力 · 秩序 · 進歩",description:"広大で肥沃な平原には農地、穀倉、街道、灌漑水路が広がります。食料と繊維原料が繁栄を支え、計画性、規律、土地の管理が Cazenia の文化を形作っています。"},
+{name:"Brenalia",href:"/ja/brenalia/",image:"/images/Brenalia-kingdom.png",role:"森と自然の王国",motto:"自然 · 自由 · 調和",description:"森、峡谷、山々に守られた Brenalia は、荒野と忘れられた過去に最も近い王国です。古代の遺跡はいまも深い森の下で眠っています。"},
+{name:"Cazenia",href:"/ja/cazenia/",image:"/images/Cazenia-kingdom.png",role:"大平原の王国",motto:"力 · 秩序 · 進歩",description:"広大で肥沃な平原には農地、穀倉、街道、灌漑水路が広がります。食料と繊維原料が繁栄を支え、計画性、規律、土地の管理が Cazenia の文化を形作っています。"},
 ];
 const places=[
 ["Sorrow Peaks","Triveria 南西部","南の海を望む、険しく孤立した峰々。その厳しい地形と不吉な名は、古い伝承、失われた道、そして大陸が忘れきれない記憶と結びついています。"],
