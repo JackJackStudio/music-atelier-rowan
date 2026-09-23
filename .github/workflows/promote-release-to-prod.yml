@@ -7,9 +7,15 @@ on:
         description: Release snapshot to publish, for example brenalia-2026-10-01
         required: true
         type: string
-      confirm:
-        description: Type PUBLISH to confirm production release
+      dry_run:
+        description: Preview changes only. No PROD files will be changed.
         required: true
+        default: true
+        type: boolean
+      confirm:
+        description: Type PUBLISH only when dry_run is false
+        required: false
+        default: ""
         type: string
 
 permissions:
@@ -21,13 +27,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Require explicit confirmation
+      - name: Validate release name
         shell: bash
         env:
+          RELEASE_NAME: ${{ inputs.release_name }}
+        run: |
+          if [[ ! "$RELEASE_NAME" =~ ^[a-z0-9][a-z0-9._-]*$ ]]; then
+            echo "Invalid release_name. Use lowercase letters, numbers, dots, dashes, or underscores."
+            exit 1
+          fi
+
+      - name: Require confirmation for live publish
+        shell: bash
+        env:
+          DRY_RUN: ${{ inputs.dry_run }}
           CONFIRM: ${{ inputs.confirm }}
         run: |
-          if [ "$CONFIRM" != "PUBLISH" ]; then
-            echo "Production promotion cancelled. confirm must equal PUBLISH."
+          if [ "$DRY_RUN" != "true" ] && [ "$CONFIRM" != "PUBLISH" ]; then
+            echo "Live production promotion cancelled. Set confirm to PUBLISH when dry_run is false."
             exit 1
           fi
 
@@ -48,19 +65,43 @@ jobs:
             exit 1
           fi
 
-      - name: Promote frozen release to PROD
+      - name: Validate required release files
         shell: bash
         env:
           RELEASE_NAME: ${{ inputs.release_name }}
         run: |
-          aws s3 sync "s3://mar-tripletsuniverse-web-releases/$RELEASE_NAME/" s3://mar-tripletsuniverse-web-prod --delete --exclude "_release-manifest.txt"
+          aws s3api head-object             --bucket mar-tripletsuniverse-web-releases             --key "$RELEASE_NAME/_release-manifest.txt" >/dev/null
+
+          aws s3api head-object             --bucket mar-tripletsuniverse-web-releases             --key "$RELEASE_NAME/index.html" >/dev/null
+
+          echo "Release manifest and index.html verified."
+
+      - name: Preview or promote frozen release
+        shell: bash
+        env:
+          RELEASE_NAME: ${{ inputs.release_name }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          if [ "$DRY_RUN" = "true" ]; then
+            echo "DRY RUN: no PROD files will be changed."
+            aws s3 sync               "s3://mar-tripletsuniverse-web-releases/$RELEASE_NAME/"               s3://mar-tripletsuniverse-web-prod               --delete               --exclude "_release-manifest.txt"               --dryrun
+          else
+            echo "LIVE PUBLISH: promoting frozen release to PROD."
+            aws s3 sync               "s3://mar-tripletsuniverse-web-releases/$RELEASE_NAME/"               s3://mar-tripletsuniverse-web-prod               --delete               --exclude "_release-manifest.txt"
+          fi
 
       - name: Invalidate PROD CloudFront
+        if: ${{ inputs.dry_run == false }}
         run: aws cloudfront create-invalidation --distribution-id E2WMH6XYHSEFZW --paths "/*"
 
-      - name: Show published release
+      - name: Show promotion result
         shell: bash
         env:
           RELEASE_NAME: ${{ inputs.release_name }}
+          DRY_RUN: ${{ inputs.dry_run }}
         run: |
-          echo "Published release: $RELEASE_NAME"
+          if [ "$DRY_RUN" = "true" ]; then
+            echo "Dry run completed successfully for release: $RELEASE_NAME"
+          else
+            echo "Published release: $RELEASE_NAME"
+          fi
