@@ -1,0 +1,59 @@
+name: Create Release Snapshot
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_name:
+        description: "Immutable release name, e.g. brenalia-2026-10-01"
+        required: true
+        type: string
+      overwrite:
+        description: "Allow replacing an existing snapshot"
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate release name
+        shell: bash
+        run: |
+          if [[ ! "${{ inputs.release_name }}" =~ ^[a-z0-9][a-z0-9._-]*$ ]]; then
+            echo "Invalid release_name. Use lowercase letters, numbers, dots, dashes, or underscores."
+            exit 1
+          fi
+
+      - name: Configure AWS credentials with OIDC
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::842788974108:role/mar-github-deploy
+          aws-region: ap-southeast-1
+
+      - name: Check whether release already exists
+        shell: bash
+        run: |
+          COUNT=$(aws s3api list-objects-v2             --bucket mar-tripletsuniverse-web-releases             --prefix "${{ inputs.release_name }}/"             --max-items 1             --query 'KeyCount'             --output text)
+
+          if [ "$COUNT" != "0" ] && [ "${{ inputs.overwrite }}" != "true" ]; then
+            echo "Release snapshot already exists. Refusing to overwrite."
+            exit 1
+          fi
+
+      - name: Snapshot tested UAT artifact
+        run: |
+          aws s3 sync             s3://mar-tripletsuniverse-web-uat             s3://mar-tripletsuniverse-web-releases/${{ inputs.release_name }}/             --delete
+
+      - name: Write release manifest
+        shell: bash
+        run: |
+          printf '%s
+'             "release_name=${{ inputs.release_name }}"             "source_bucket=mar-tripletsuniverse-web-uat"             "created_by=GitHub Actions"             "created_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)"             > release-manifest.txt
+
+          aws s3 cp release-manifest.txt             s3://mar-tripletsuniverse-web-releases/${{ inputs.release_name }}/_release-manifest.txt             --content-type "text/plain; charset=utf-8"             --cache-control "no-store"
