@@ -103,18 +103,17 @@ export default function EpisodeOnePage() {
 
       <AureliaNav active="episode-1" />
 
-      <AnalyticsLink className="episodeMusicBanner" href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer" eventName="listen_soundtrack" params={{ kingdom: "aurelia", episode: 1, tracks: "01-06", language: "en", source: "episode_page", platform: "youtube" }}>
-        <span className="episodeMusicIcon">▶</span>
-        <span><strong>Listen to Episode I</strong><small>Open the soundtrack on YouTube and let the music accompany you as you read.</small></span>
-        <em>YouTube ↗</em>
-      </AnalyticsLink>
-
       <section className="aureliaEpisodeHeader">
         <span className="sectionKicker">Episode I · Tracks 01–06</span>
         <h1>The Princess Becomes a Queen</h1>
         <p className="aureliaLead">
           Childhood gives way to curiosity, friendship, war, grief, and a crown Jessara never expected to carry so soon.
         </p>
+        <AnalyticsLink className="episodeMusicBanner" href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer" eventName="listen_soundtrack" params={{ kingdom: "aurelia", episode: 1, tracks: "01-06", language: "en", source: "episode_page", platform: "youtube" }}>
+          <span className="episodeMusicIcon">▶</span>
+          <span><strong>Story Music — Episode I — Track 01–06</strong><small>Open the soundtrack on YouTube and let the music accompany you as you read.</small></span>
+          <em>Listen now →</em>
+        </AnalyticsLink>
       </section>
 
       <section className="aureliaStoryChapters">
