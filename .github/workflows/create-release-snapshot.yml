@@ -4,11 +4,11 @@ on:
   workflow_dispatch:
     inputs:
       release_name:
-        description: "Immutable release name, e.g. brenalia-2026-10-01"
+        description: Immutable release name, for example brenalia-2026-10-01
         required: true
         type: string
       overwrite:
-        description: "Allow replacing an existing snapshot"
+        description: Allow replacing an existing snapshot
         required: true
         default: false
         type: boolean
@@ -24,8 +24,10 @@ jobs:
     steps:
       - name: Validate release name
         shell: bash
+        env:
+          RELEASE_NAME: ${{ inputs.release_name }}
         run: |
-          if [[ ! "${{ inputs.release_name }}" =~ ^[a-z0-9][a-z0-9._-]*$ ]]; then
+          if [[ ! "$RELEASE_NAME" =~ ^[a-z0-9][a-z0-9._-]*$ ]]; then
             echo "Invalid release_name. Use lowercase letters, numbers, dots, dashes, or underscores."
             exit 1
           fi
@@ -38,22 +40,30 @@ jobs:
 
       - name: Check whether release already exists
         shell: bash
+        env:
+          RELEASE_NAME: ${{ inputs.release_name }}
+          OVERWRITE: ${{ inputs.overwrite }}
         run: |
-          COUNT=$(aws s3api list-objects-v2             --bucket mar-tripletsuniverse-web-releases             --prefix "${{ inputs.release_name }}/"             --max-items 1             --query 'KeyCount'             --output text)
-
-          if [ "$COUNT" != "0" ] && [ "${{ inputs.overwrite }}" != "true" ]; then
+          COUNT=$(aws s3api list-objects-v2 --bucket mar-tripletsuniverse-web-releases --prefix "$RELEASE_NAME/" --max-items 1 --query 'KeyCount' --output text)
+          if [ "$COUNT" != "0" ] && [ "$OVERWRITE" != "true" ]; then
             echo "Release snapshot already exists. Refusing to overwrite."
             exit 1
           fi
 
       - name: Snapshot tested UAT artifact
+        shell: bash
+        env:
+          RELEASE_NAME: ${{ inputs.release_name }}
         run: |
-          aws s3 sync             s3://mar-tripletsuniverse-web-uat             s3://mar-tripletsuniverse-web-releases/${{ inputs.release_name }}/             --delete
+          aws s3 sync s3://mar-tripletsuniverse-web-uat "s3://mar-tripletsuniverse-web-releases/$RELEASE_NAME/" --delete
 
       - name: Write release manifest
         shell: bash
+        env:
+          RELEASE_NAME: ${{ inputs.release_name }}
         run: |
-          printf '%s
-'             "release_name=${{ inputs.release_name }}"             "source_bucket=mar-tripletsuniverse-web-uat"             "created_by=GitHub Actions"             "created_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)"             > release-manifest.txt
-
-          aws s3 cp release-manifest.txt             s3://mar-tripletsuniverse-web-releases/${{ inputs.release_name }}/_release-manifest.txt             --content-type "text/plain; charset=utf-8"             --cache-control "no-store"
+          echo "release_name=$RELEASE_NAME" > release-manifest.txt
+          echo "source_bucket=mar-tripletsuniverse-web-uat" >> release-manifest.txt
+          echo "created_by=GitHub Actions" >> release-manifest.txt
+          echo "created_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> release-manifest.txt
+          aws s3 cp release-manifest.txt "s3://mar-tripletsuniverse-web-releases/$RELEASE_NAME/_release-manifest.txt" --content-type "text/plain; charset=utf-8" --cache-control "no-store"
