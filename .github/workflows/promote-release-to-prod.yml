@@ -62,4 +62,5 @@ jobs:
         shell: bash
         env:
           RELEASE_NAME: ${{ inputs.release_name }}
-        run: echo "Published release: $RELEASE_NAME"
+        run: |
+          echo "Published release: $RELEASE_NAME"
