@@ -128,6 +128,11 @@ export default function EpisodeTwoPage() {
           Jessara must lead while fearing another personal loss. Cedric, the silver-winged fairy, and one final chance to
           save Aurelia carry the story toward its return to peace.
         </p>
+        <a className="episodeMusicBanner" href="https://youtu.be/bf-5DsIqcGE" target="_blank" rel="noopener noreferrer">
+          <span className="episodeMusicIcon">▶</span>
+          <span><strong>Story Music — Episode II — Track 07–12</strong><small>YouTube</small></span>
+          <em>Listen now →</em>
+        </a>
       </section>
 
       <section className="aureliaStoryChapters">
