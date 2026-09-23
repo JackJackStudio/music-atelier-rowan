@@ -42,7 +42,7 @@ export default function JaHome() {
         <div className="storyGrid">
           {stories.map((story) => (
             <div className="storyItem" key={story.slug}>
-              <AnalyticsLink className={`storyCard ${story.slug}`} href={story.slug === "aurelia" ? "/ja/aurelia/" : `/${story.slug}/`} ariaLabel={`物語へ: ${story.slug}`} eventName="enter_story" params={{ kingdom: story.slug, language: "ja", source: "homepage" }}>
+              <AnalyticsLink className={`storyCard ${story.slug}`} href={`/ja/${story.slug}/`} ariaLabel={`物語へ: ${story.slug}`} eventName="enter_story" params={{ kingdom: story.slug, language: "ja", source: "homepage" }}>
                 <div className="storyLogoArea">
                   <img className="storyLogo" src={`/logos/${story.slug}-logo.webp`} alt="" />
                 </div>

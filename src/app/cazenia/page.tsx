@@ -4,8 +4,14 @@ export default function CazeniaPage() {
   return (
     <main className="aureliaPage kingdomPage cazeniaRealm">
       <header className="realmTop">
-        <Link className="back" href="/">← Back to Music Atelier Rowan</Link>
-        <div className="realmName">CAZENIA</div>
+        <div>
+          <Link className="back" href="/">← Back to Music Atelier Rowan</Link>
+          <div className="languageChoices">
+            <Link className="languageLink" href="/zh/cazenia/">中文</Link>
+            <Link className="languageLink" href="/ja/cazenia/">日本語</Link>
+          </div>
+        </div>
+        <img className="aureliaWordmark" src="/logos/cazenia-logo.webp" alt="Cazenia — The Princess and the Silver Thread" />
       </header>
 
       <section className="aureliaKingdomHero">

@@ -742,20 +742,28 @@ footer strong { color: #b9b0a4; font-weight: 500; }
 }
 .storyMusicLinks {
   min-height:3.8rem;
-  padding:.85rem .25rem 0;
+  padding:.85rem 0 0;
 }
 .storyMusicLinks a {
-  display:inline-flex;
+  display:flex;
+  width:100%;
+  min-height:2.2rem;
   align-items:center;
   gap:.55rem;
+  padding:.45rem .75rem;
+  border:1px solid rgba(220,182,95,.30);
+  background:rgba(220,182,95,.025);
   color:var(--gold-soft);
   font:.76rem system-ui,sans-serif;
   letter-spacing:.04em;
-  transition:color .2s ease,transform .2s ease;
+  transition:color .2s ease,transform .2s ease,border-color .2s ease,background .2s ease,box-shadow .2s ease;
 }
 .storyMusicLinks a:hover {
   color:#fff0bf;
-  transform:translateX(2px);
+  transform:translateY(-2px);
+  border-color:rgba(220,182,95,.65);
+  background:rgba(220,182,95,.07);
+  box-shadow:0 10px 24px rgba(0,0,0,.22);
 }
 .storyMusicLinks a span {
   font-size:.68rem;

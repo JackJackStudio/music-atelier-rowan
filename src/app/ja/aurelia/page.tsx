@@ -22,7 +22,7 @@ export default function JaAureliaPage() {
           <img src="/images/Aurelia-kingdom.png" alt="白い石造りの山岳王国 Aurelia" />
         </div>
         <div className="aureliaKingdomIntro">
-          <span className="sectionKicker">トリヴェリア最初の王国</span>
+          <span className="sectionKicker">トリヴェリアの河川王国</span>
           <h1>Aurelia 王国</h1>
           <p className="aureliaLead">
             白い石の都、青と金の旗、高い橋、滝、深い谷。朝の光に輝く、美しく豊かな山岳王国。

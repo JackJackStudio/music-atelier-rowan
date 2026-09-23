@@ -22,7 +22,7 @@ export default function AureliaPage() {
           <img src="/images/Aurelia-kingdom.png" alt="The river kingdom of Aurelia" />
         </div>
         <div className="aureliaKingdomIntro">
-          <span className="sectionKicker">The First Kingdom of Triveria</span>
+          <span className="sectionKicker">The River Kingdom of Triveria</span>
           <h1>Kingdom Aurelia</h1>
           <p className="aureliaLead">
             A river-bound kingdom of white stone, royal blue, and gold — shaped by craft, duty, and the belief that strength should serve the people.

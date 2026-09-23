@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const kingdoms = [
   { name:"Aurelia", href:"/zh/aurelia/", image:"/images/Aurelia-kingdom.png", role:"河流與工藝之國", motto:"責任 · 工藝 · 服務", description:"河流穿越白石城市、橋樑與河谷，水力孕育了磨坊與各式工坊。Aurelia 將 Triveria 各地的原料轉化為精緻商品，也延續著騎士、責任與服務人民的傳統。" },
-  { name:"Brenalia", href:"/brenalia/", image:"/images/Brenalia-kingdom.png", role:"森林與自然之國", motto:"自然 · 自由 · 和諧", description:"森林、峽谷與山脈形成天然屏障，使 Brenalia 與荒野及古老世界保持著更緊密的聯繫。許多被遺忘的遺跡，至今仍沉睡在森林深處。" },
-  { name:"Cazenia", href:"/cazenia/", image:"/images/Cazenia-kingdom.png", role:"大平原之國", motto:"力量 · 秩序 · 進步", description:"Cazenia 擁有廣闊肥沃的平原，遍布農田、穀倉、道路與灌溉渠道。糧食與紡織原料支撐著王國的繁榮，而規劃、紀律與土地管理則塑造了它的文化。" },
+  { name:"Brenalia", href:"/zh/brenalia/", image:"/images/Brenalia-kingdom.png", role:"森林與自然之國", motto:"自然 · 自由 · 和諧", description:"森林、峽谷與山脈形成天然屏障，使 Brenalia 與荒野及古老世界保持著更緊密的聯繫。許多被遺忘的遺跡，至今仍沉睡在森林深處。" },
+  { name:"Cazenia", href:"/zh/cazenia/", image:"/images/Cazenia-kingdom.png", role:"大平原之國", motto:"力量 · 秩序 · 進步", description:"Cazenia 擁有廣闊肥沃的平原，遍布農田、穀倉、道路與灌溉渠道。糧食與紡織原料支撐著王國的繁榮，而規劃、紀律與土地管理則塑造了它的文化。" },
 ];
 
 const places=[
