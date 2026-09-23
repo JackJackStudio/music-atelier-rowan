@@ -71,16 +71,15 @@ export default function JaEpisodeOnePage() {
         <img className="aureliaWordmark" src="/logos/aurelia-logo.webp" alt="Aurelia — The Princess and the Silver Wings" />
       </header>
       <JaAureliaNav active="episode-1" />
-      <AnalyticsLink className="episodeMusicBanner" href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer" eventName="listen_soundtrack" params={{ kingdom: "aurelia", episode: 1, tracks: "01-06", language: "ja", source: "episode_page", platform: "youtube" }}>
-        <span className="episodeMusicIcon">▶</span>
-        <span><strong>第一章の音楽を聴く</strong><small>YouTube でサウンドトラックを開き、音楽とともに物語をお楽しみください。</small></span>
-        <em>YouTube ↗</em>
-      </AnalyticsLink>
-
       <section className="aureliaEpisodeHeader">
         <span className="sectionKicker">第一章 · Tracks 01–06</span>
         <h1>姫が女王になるまで</h1>
         <p className="aureliaLead">幼年期は、好奇心、友情、戦争、喪失へと姿を変え、Jessara はあまりにも早く王冠を受け取ることになります。</p>
+        <AnalyticsLink className="episodeMusicBanner" href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer" eventName="listen_soundtrack" params={{ kingdom: "aurelia", episode: 1, tracks: "01-06", language: "ja", source: "episode_page", platform: "youtube" }}>
+          <span className="episodeMusicIcon">▶</span>
+          <span><strong>ストーリー音楽 — Episode I — Track 01–06</strong><small>YouTube でサウンドトラックを開き、音楽とともに物語をお楽しみください。</small></span>
+          <em>今すぐ聴く →</em>
+        </AnalyticsLink>
       </section>
       <section className="aureliaStoryChapters">
         {tracks.map((track) => (
