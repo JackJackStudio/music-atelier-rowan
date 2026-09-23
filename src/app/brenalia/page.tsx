@@ -5,7 +5,7 @@ export default function BrenaliaPage() {
     <main className="aureliaPage kingdomPage brenaliaRealm">
       <header className="realmTop">
         <Link className="back" href="/">← Back to Music Atelier Rowan</Link>
-        <div className="realmName">BRENALIA</div>
+        <img className="aureliaWordmark" src="/logos/brenalia-logo.webp" alt="Brenalia — The Princess and the Lost Relic" />
       </header>
 
       <section className="aureliaKingdomHero">
