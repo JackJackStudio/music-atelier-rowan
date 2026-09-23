@@ -67,7 +67,7 @@ export default function Home() {
               {story.slug === "aurelia" && (
                 <div className="storyMusicLinks">
                   <AnalyticsLink href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer" eventName="listen_soundtrack" params={{ kingdom: "aurelia", episode: 1, tracks: "01-06", language: "en", source: "homepage", platform: "youtube" }}>
-                    <span>▶</span> Story Music — Episode 01–06
+                    <span>▶</span> Story Music — Episode I — Track 01–06
                   </AnalyticsLink>
                 </div>
               )}
