@@ -754,8 +754,8 @@ footer strong { color: #b9b0a4; font-weight: 500; }
   border:1px solid rgba(220,182,95,.30);
   background:rgba(220,182,95,.025);
   color:var(--gold-soft);
-  font:.76rem system-ui,sans-serif;
-  letter-spacing:.04em;
+  font:.9rem system-ui,sans-serif;
+  letter-spacing:.035em;
   transition:color .2s ease,transform .2s ease,border-color .2s ease,background .2s ease,box-shadow .2s ease;
 }
 .storyMusicLinks a:hover {
@@ -766,7 +766,7 @@ footer strong { color: #b9b0a4; font-weight: 500; }
   box-shadow:0 10px 24px rgba(0,0,0,.22);
 }
 .storyMusicLinks a span {
-  font-size:.68rem;
+  font-size:.78rem;
 }
 @media (max-width:960px) {
   .storyCard { min-height:27rem; }
