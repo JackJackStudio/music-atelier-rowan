@@ -22,7 +22,7 @@ export default function ZhAureliaPage() {
           <img src="/images/Aurelia-kingdom.png" alt="Aurelia 白石山岳王國" />
         </div>
         <div className="aureliaKingdomIntro">
-          <span className="sectionKicker">Triveria 的第一個王國</span>
+          <span className="sectionKicker">Triveria 的河川王國</span>
           <h1>Aurelia 王國</h1>
           <p className="aureliaLead">
             一個沐浴在晨光中的山岳王國：白色石城、藍金旗幟、高聳石橋、瀑布與深邃河谷。
