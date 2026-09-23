@@ -44,7 +44,7 @@ jobs:
           RELEASE_NAME: ${{ inputs.release_name }}
           OVERWRITE: ${{ inputs.overwrite }}
         run: |
-          COUNT=$(aws s3api list-objects-v2 --bucket mar-tripletsuniverse-web-releases --prefix "$RELEASE_NAME/" --max-keys 1 --query 'length(Contents)' --output text)
+          COUNT=$(aws s3api list-objects-v2 --bucket mar-tripletsuniverse-web-releases --prefix "$RELEASE_NAME/" --max-keys 1 --query 'KeyCount' --output text)
           if [ "$COUNT" != "0" ] && [ "$OVERWRITE" != "true" ]; then
             echo "Release snapshot already exists. Refusing to overwrite."
             exit 1
