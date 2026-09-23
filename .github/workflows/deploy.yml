@@ -1,9 +1,6 @@
-name: Deploy to AWS
+name: Build and Deploy PROD
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 permissions:
@@ -45,7 +42,7 @@ jobs:
             fi
           done
 
-      - name: Upload to S3
+      - name: Upload to PROD S3
         run: |
           aws s3 sync out/ s3://mar-tripletsuniverse-web-prod --delete --exclude "*.__cleanurl"
           find out -type f -name "*.__cleanurl" | while read file; do
@@ -54,5 +51,5 @@ jobs:
             aws s3 cp "$file" "s3://mar-tripletsuniverse-web-prod/$key" --content-type "text/html; charset=utf-8" --cache-control "public,max-age=0,must-revalidate"
           done
 
-      - name: Invalidate CloudFront
+      - name: Invalidate PROD CloudFront
         run: aws cloudfront create-invalidation --distribution-id E2WMH6XYHSEFZW --paths "/*"
