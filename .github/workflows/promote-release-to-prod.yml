@@ -4,11 +4,11 @@ on:
   workflow_dispatch:
     inputs:
       release_name:
-        description: "Release snapshot to publish, e.g. brenalia-2026-10-01"
+        description: Release snapshot to publish, for example brenalia-2026-10-01
         required: true
         type: string
       confirm:
-        description: "Type PUBLISH to confirm production release"
+        description: Type PUBLISH to confirm production release
         required: true
         type: string
 
@@ -23,9 +23,11 @@ jobs:
     steps:
       - name: Require explicit confirmation
         shell: bash
+        env:
+          CONFIRM: ${{ inputs.confirm }}
         run: |
-          if [ "${{ inputs.confirm }}" != "PUBLISH" ]; then
-            echo "Production promotion cancelled: confirm must equal PUBLISH."
+          if [ "$CONFIRM" != "PUBLISH" ]; then
+            echo "Production promotion cancelled. confirm must equal PUBLISH."
             exit 1
           fi
 
@@ -37,20 +39,27 @@ jobs:
 
       - name: Verify release snapshot exists
         shell: bash
+        env:
+          RELEASE_NAME: ${{ inputs.release_name }}
         run: |
-          COUNT=$(aws s3api list-objects-v2             --bucket mar-tripletsuniverse-web-releases             --prefix "${{ inputs.release_name }}/"             --max-items 1             --query 'KeyCount'             --output text)
-
+          COUNT=$(aws s3api list-objects-v2 --bucket mar-tripletsuniverse-web-releases --prefix "$RELEASE_NAME/" --max-items 1 --query 'KeyCount' --output text)
           if [ "$COUNT" = "0" ]; then
             echo "Release snapshot does not exist."
             exit 1
           fi
 
       - name: Promote frozen release to PROD
+        shell: bash
+        env:
+          RELEASE_NAME: ${{ inputs.release_name }}
         run: |
-          aws s3 sync             s3://mar-tripletsuniverse-web-releases/${{ inputs.release_name }}/             s3://mar-tripletsuniverse-web-prod             --delete             --exclude "_release-manifest.txt"
+          aws s3 sync "s3://mar-tripletsuniverse-web-releases/$RELEASE_NAME/" s3://mar-tripletsuniverse-web-prod --delete --exclude "_release-manifest.txt"
 
       - name: Invalidate PROD CloudFront
         run: aws cloudfront create-invalidation --distribution-id E2WMH6XYHSEFZW --paths "/*"
 
       - name: Show published release
-        run: echo "Published release: ${{ inputs.release_name }}"
+        shell: bash
+        env:
+          RELEASE_NAME: ${{ inputs.release_name }}
+        run: echo "Published release: $RELEASE_NAME"
