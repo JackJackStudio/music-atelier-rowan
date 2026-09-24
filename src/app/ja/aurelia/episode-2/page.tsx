@@ -93,11 +93,6 @@ export default function JaEpisodeTwoPage() {
         <span className="sectionKicker">第二章 · Tracks 07–12</span>
         <h1>女王と戦争</h1>
         <p className="aureliaLead">Jessara は、父王の生死が分からないまま王国を導き、Cedric まで同じ戦争の中へ消えてしまうことを恐れます。銀翼の小妖精と最後の反攻が、物語を平和へと運びます。</p>
-        <a className="episodeMusicBanner" href="https://youtu.be/bf-5DsIqcGE" target="_blank" rel="noopener noreferrer">
-          <span className="episodeMusicIcon">▶</span>
-          <span><strong>ストーリー音楽 — Episode II — Track 07–12</strong><small>YouTube</small></span>
-          <em>今すぐ聴く →</em>
-        </a>
       </section>
       <section className="aureliaStoryChapters">
         {tracks.map((track) => (
