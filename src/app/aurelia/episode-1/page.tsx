@@ -57,26 +57,26 @@ const tracks = [
   {
     number: "05",
     title: "The Empty Throne",
-    summary: "Jessara waits for the king to return — and learns that returning home is not the same as coming back.",
+    summary: "The king disappears in battle, leaving Jessara trapped between hope and the duty to face what no one can prove.",
     story: [
       "The war lasts far longer than anyone expected. Jessara is drawn into more council meetings and begins to understand what the words casualties, supplies, refugees, and reinforcements truly mean.",
-      "Cedric occasionally sends short notes from the front. Each time, Jessara checks two things first: her father is alive, and Cedric is alive.",
-      "One morning word reaches the palace that the king is returning. Jessara runs through the corridors, believing the war may finally be over.",
-      "Then she steps into the outer court. There is no cheering. No music. No victory standard. The returning soldiers are silent. The royal banners hang low.",
-      "Her father is not riding at the front. He is lying on a stretcher.",
-      "For the first time, Jessara sees not a king but simply her father — a man who can bleed, suffer, and die.",
-      "When he briefly wakes, Jessara insists, “You’re going to be fine.” He knows she is lying. He says, “Jessara… listen to me.” She refuses. “No. You can tell me later.” He never gets to finish what he wanted to say.",
-      "After his death, Jessara walks alone into the throne room. The chair is empty. The silver-winged fairy sits silently on one armrest. Jessara stands there for a long time before finally allowing herself to cry."
+      "Cedric occasionally sends short notes from the front. Each time, Jessara checks two things first: her father is still accounted for, and Cedric is alive.",
+      "Then a broken unit returns from a brutal battle near the mountains. The report is confused, incomplete, and terrifying: soldiers saw the king struck by two arrows before he fell from his horse.",
+      "In the chaos, the wounded horse bolted. Some soldiers believe the king may have been dragged away from the fighting and over the edge of a nearby ravine. Others insist they lost sight of him before that happened. No one can say for certain.",
+      "Aurelia searches the battlefield, the roads, and the valley below. They find broken weapons, torn banners, dead soldiers, and riderless horses — but they do not find the king.",
+      "The official record can only say Missing in Action. Presumed dead. Jessara hates both phrases. One sounds too uncertain. The other sounds too final.",
+      "For days she refuses to let anyone remove her father’s papers from the council chamber. Each sound in the corridor makes her look up. Each messenger makes her heart stop for a moment.",
+      "At last Jessara walks alone into the throne room. The king’s seat is empty, but no funeral has given that emptiness a meaning. The silver-winged fairy sits quietly on one armrest while Jessara stares at the throne and whispers, “Where are you?”"
     ]
   },
   {
     number: "06",
     title: "The Crown Is Heavy",
-    summary: "Aurelia has no time to wait for Jessara to finish grieving. The princess must become queen while the war is still burning.",
+    summary: "Aurelia cannot wait forever for a missing king. Jessara must accept the crown while part of her still believes her father may be alive.",
     story: [
-      "The funeral ends, but the war does not. Every morning brings petitions, casualty reports, food shortages, military requests, displaced families, tax decisions, and questions no one else is willing to answer.",
+      "There is no funeral. There is no body. There is only war — and a kingdom that cannot remain leaderless while every day brings petitions, casualty reports, food shortages, military requests, displaced families, tax decisions, and questions no one else is willing to answer.",
       "Jessara sits at her father’s desk and asks quietly, “How did he do this every day?” No one answers.",
-      "The little fairy tries to help by moving a sheet of paper larger than herself and ends up buried beneath it. Jessara laughs despite herself — and then immediately begins to cry. It is the first time she has laughed since her father died.",
+      "The little fairy tries to help by moving a sheet of paper larger than herself and ends up buried beneath it. Jessara laughs despite herself — and then immediately begins to cry. It is the first time she has laughed since her father disappeared.",
       "On the morning of the coronation, the crown waits on a table. It is beautiful and almost cruel in its weight. Cedric has returned briefly from the front to attend the ceremony.",
       "Jessara asks him, “Do I look terrified?” Cedric answers, “Yes.” She glares. He adds, “But only to people who know you.”",
       "Jessara asks him to stay until tomorrow. He does not answer, because they both know the war will not pause for a coronation.",
@@ -107,7 +107,7 @@ export default function EpisodeOnePage() {
         <span className="sectionKicker">Episode I · Tracks 01–06</span>
         <h1>The Princess Becomes a Queen</h1>
         <p className="aureliaLead">
-          Childhood gives way to curiosity, friendship, war, grief, and a crown Jessara never expected to carry so soon.
+          Childhood gives way to curiosity, friendship, war, uncertainty, and a crown Jessara never expected to carry so soon.
         </p>
         <AnalyticsLink className="episodeMusicBanner" href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer" eventName="listen_soundtrack" params={{ kingdom: "aurelia", episode: 1, tracks: "01-06", language: "en", source: "episode_page", platform: "youtube" }}>
           <span className="episodeMusicIcon">▶</span>
