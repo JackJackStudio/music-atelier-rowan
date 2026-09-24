@@ -93,11 +93,6 @@ export default function ZhEpisodeTwoPage() {
         <span className="sectionKicker">第二章 · Tracks 07–12</span>
         <h1>女王與戰爭</h1>
         <p className="aureliaLead">Jessara 必須在父王生死未明的陰影下領導王國，也害怕 Cedric 會像父王一樣消失在同一場戰爭裡。銀翼小精靈與最後一次反攻，將故事帶向和平。</p>
-        <a className="episodeMusicBanner" href="https://youtu.be/bf-5DsIqcGE" target="_blank" rel="noopener noreferrer">
-          <span className="episodeMusicIcon">▶</span>
-          <span><strong>故事配樂 — Episode II — Track 07–12</strong><small>YouTube</small></span>
-          <em>立即聆聽 →</em>
-        </a>
       </section>
       <section className="aureliaStoryChapters">
         {tracks.map((track) => (
