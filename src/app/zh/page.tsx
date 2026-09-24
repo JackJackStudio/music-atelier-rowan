@@ -57,9 +57,6 @@ export default function ZhHome() {
                   <AnalyticsLink href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer" eventName="listen_soundtrack" params={{ kingdom: "aurelia", episode: 1, tracks: "01-06", language: "zh", source: "homepage", platform: "youtube" }}>
                     <span>▶</span> 故事配樂 — Episode I — Track 01–06
                   </AnalyticsLink>
-                  <AnalyticsLink href="https://youtu.be/bf-5DsIqcGE" target="_blank" rel="noopener noreferrer" eventName="listen_soundtrack" params={{ kingdom: "aurelia", episode: 2, tracks: "07-12", language: "zh", source: "homepage", platform: "youtube" }}>
-                    <span>▶</span> 故事配樂 — Episode II — Track 07–12
-                  </AnalyticsLink>
                 </div>
               )}
             </div>
