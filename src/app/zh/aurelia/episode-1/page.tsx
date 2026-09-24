@@ -34,20 +34,20 @@ const tracks = [
     "城外，士兵在藍金旗幟下集結。Cedric 也在其中，準備參加人生第一場真正的戰役。Jessara 脫口而出：「You too?」Cedric 苦笑：「Apparently this is what knights do.」Jessara：「That is a stupid answer.」Cedric：「I know.」",
     "城門開啟。父王騎在軍隊最前方，最後一次回頭向女兒抬起手。Jessara 也舉起手，卻沒有揮動。她一直站在原地，直到父王和 Cedric 都消失在道路盡頭。"
   ]},
-  { number:"05", title:"The Empty Throne", zhTitle:"空著的王座", summary:"Jessara 等著父王回家，卻第一次明白——回到王城，並不代表真正回來了。", story:[
+  { number:"05", title:"The Empty Throne", zhTitle:"空著的王座", summary:"國王在戰場上失蹤，Jessara 被困在希望與責任之間——沒有人能證明他已經死去。", story:[
     "戰爭比所有人預期得更久。Jessara 被要求參加越來越多議事，也開始真正理解傷亡、補給、難民與援軍代表什麼。",
-    "Cedric 偶爾會從前線傳回短短的消息。每一次 Jessara 都先確認兩件事：父王還活著，Cedric 也還活著。",
-    "某個清晨，消息傳來：國王回城了。Jessara 幾乎跑著穿過整座王宮，以為戰爭終於結束。",
-    "但她踏進外庭後，看不到歡呼、音樂或勝利旗幟。所有返回的士兵都保持沉默，王室旗幟低垂。",
-    "父王不是騎著馬回來的。他躺在擔架上。",
-    "那一刻 Jessara 第一次看見的不是國王，而只是自己的父親——一個會流血、會受傷、也會死去的人。",
-    "父王短暫醒來時，她堅持說：「You’re going to be fine.」父王知道她在說謊，只叫她：「Jessara… listen to me.」她立刻拒絕：「No. You can tell me later.」但他再也沒有機會把那句話說完。",
-    "父王死後，Jessara 一個人走進王座廳。王座是空的。銀翼小精靈靜靜坐在扶手上。Jessara 站了很久，最後才終於允許自己哭出來。"
+    "Cedric 偶爾會從前線傳回短短的消息。每一次 Jessara 都先確認兩件事：父王仍然有消息，Cedric 也還活著。",
+    "直到一支在山區激戰中被打散的部隊回到王城。軍報混亂而殘缺，卻有一點被多名士兵反覆提起：他們親眼看見國王身中兩箭，隨後從馬背上摔落。",
+    "混戰中，受驚的戰馬繼續狂奔。有士兵相信國王的身體可能被拖離戰場，最後墜入附近山谷；也有人堅持自己在那之前就已經看不見國王。沒有人能確定真正發生了什麼。",
+    "Aurelia 軍隊搜索戰場、道路與山谷。他們找到破碎武器、撕裂的旗幟、陣亡士兵與失去主人的戰馬——卻始終沒有找到國王。",
+    "官方最後只能留下兩個詞：Missing in Action。Presumed Dead。Jessara 討厭這兩個說法，一個太不確定，另一個又太像宣判。",
+    "一連幾天，她不准任何人整理父王留在議事廳的文件。走廊上每一個腳步聲都讓她抬頭，每一名使者出現，都讓她的心停一下。",
+    "最後，Jessara 一個人走進王座廳。王座是空的，但沒有葬禮替這份空白下定義。銀翼小精靈安靜坐在扶手上。Jessara 望著父王的位置，低聲問：「Where are you?」"
   ]},
-  { number:"06", title:"The Crown Is Heavy", zhTitle:"王冠如此沉重", summary:"Aurelia 沒有時間等待 Jessara 悲傷結束。戰爭還在繼續，公主必須成為女王。", story:[
-    "葬禮結束了，戰爭卻沒有。每天早晨等待 Jessara 的，是請願、傷亡名單、糧食短缺、軍方要求、流離失所的人民、稅務與各種沒有人願意替她回答的問題。",
+  { number:"06", title:"The Crown Is Heavy", zhTitle:"王冠如此沉重", summary:"Aurelia 不能永遠等待一位失蹤的國王。Jessara 必須接過王冠，即使她心裡仍相信父王可能還活著。", story:[
+    "沒有葬禮，沒有遺體，只有仍在持續的戰爭。王國不能一直沒有領導者，而每天早晨等待 Jessara 的，仍是請願、傷亡名單、糧食短缺、軍方要求、流離失所的人民、稅務與各種沒有人願意替她回答的問題。",
     "Jessara 坐在父王的書桌前，低聲問：「How did he do this every day?」沒有人回答。",
-    "小精靈努力想幫忙搬一張比自己還大的文件，結果整個人被紙壓住。Jessara 忍不住笑了一聲，下一秒卻又哭了。那是父王死後，她第一次笑。",
+    "小精靈努力想幫忙搬一張比自己還大的文件，結果整個人被紙壓住。Jessara 忍不住笑了一聲，下一秒卻又哭了。那是父王失蹤後，她第一次笑。",
     "加冕當天，王冠安靜地放在桌上。它漂亮得近乎殘酷。Cedric 從前線短暫趕回王城參加儀式。",
     "Jessara 問：「Do I look terrified?」Cedric 很誠實：「Yes.」她瞪他。Cedric 又補一句：「But only to people who know you.」",
     "Jessara 希望他至少待到明天。Cedric 沒有回答，因為兩個人都知道，戰爭不會因為一場加冕而停一天。",
@@ -74,7 +74,7 @@ export default function ZhEpisodeOnePage() {
       <section className="aureliaEpisodeHeader">
         <span className="sectionKicker">第一章 · Tracks 01–06</span>
         <h1>公主成為女王</h1>
-        <p className="aureliaLead">童年逐漸讓位給好奇、友情、戰爭、失去，以及一頂 Jessara 從未想過會這麼早戴上的王冠。</p>
+        <p className="aureliaLead">童年逐漸讓位給好奇、友情、戰爭、未知，以及一頂 Jessara 從未想過會這麼早戴上的王冠。</p>
         <AnalyticsLink className="episodeMusicBanner" href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer" eventName="listen_soundtrack" params={{ kingdom: "aurelia", episode: 1, tracks: "01-06", language: "zh", source: "episode_page", platform: "youtube" }}>
           <span className="episodeMusicIcon">▶</span>
           <span><strong>故事配樂 — Episode I — Track 01–06</strong><small>在 YouTube 開啟配樂，讓音樂陪你一起閱讀這段故事。</small></span>
