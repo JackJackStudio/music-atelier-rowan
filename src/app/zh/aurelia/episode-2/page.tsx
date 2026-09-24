@@ -10,7 +10,7 @@ const tracks = [
     "短暫的平靜很快結束。新的軍令抵達，Cedric 必須再次回到前線。",
     "城門前，Jessara 問：「How long?」Cedric：「I don’t know.」她說：「That is a terrible answer.」他回答：「It is an honest one.」",
     "Jessara 原本有很多話想說，最後只剩一句：「Come back.」Cedric 回答：「I always do.」Jessara 看著他：「That’s not a promise.」Cedric 只說：「No.」",
-    "軍隊出發後，Cedric 回頭望了一次。Jessara 還站在城門上。她已經從這扇門失去過一個她愛的人，如今又看著另一個人走向同一場戰爭。"
+    "軍隊出發後，Cedric 回頭望了一次。Jessara 還站在城門上。她已經看著一個她愛的人從這扇門離開，之後再也沒有回來；如今，她又看著另一個人走向同一場戰爭。"
   ]},
   { number:"08", title:"Her Wish Under the Moon", zhTitle:"月下的願望", summary:"白天，Jessara 必須替王國做出沒有正確答案的決定；到了夜裡，她才允許自己保留一個私人願望。", story:[
     "戰爭進入最漫長、最消耗人的階段。這一章沒有單一的大事件，而是女王日復一日的生活。",
@@ -23,10 +23,10 @@ const tracks = [
     "Jessara 低聲說：「I don’t need victory tonight.」停了一會兒，又說：「Just… bring them home.」",
     "小精靈從窗台醒來，飛到她肩上。這裡是女王少數允許自己承認『我很害怕』的地方。"
   ]},
-  { number:"09", title:"When the Knight Fell", zhTitle:"當騎士倒下", summary:"Cedric 重傷被送回王宮，迫使 Jessara 再次看見當年父王被抬回來的那一天。", story:[
+  { number:"09", title:"When the Knight Fell", zhTitle:"當騎士倒下", summary:"Cedric 重傷被送回王宮，迫使 Jessara 再次經歷父王失蹤那一天的恐懼。", story:[
     "Jessara 正在議事，一名軍官匆忙闖進來，甚至忘了行禮。他只說：「Your Majesty…」Jessara 從他的表情就知道出事了。",
     "Cedric 被抬進王宮。他的盔甲已經被割開，衣服上滿是血。",
-    "有那麼可怕的一瞬間，Jessara 看見的不是 Cedric，而是多年前躺在擔架上的父王——同樣的走廊、同樣急促的腳步、同樣奔跑的醫師。",
+    "有那麼可怕的一瞬間，Jessara 看見的不是 Cedric，而是父王失蹤那天留下的混亂記憶——帶血的盔甲、支離破碎的軍報、急促的腳步，以及沒有人知道國王究竟去了哪裡的恐懼。",
     "直到有人叫了一聲「Your Majesty?」，她才重新動起來。",
     "Cedric 昏迷了好幾個小時。Jessara 推掉數次議事要求，一直守在床邊。",
     "小精靈停在 Cedric 胸前，使用自己微弱而溫柔的魔法。那不是能讓死人復生的奇蹟，只足以讓他的呼吸慢慢穩定。",
@@ -61,10 +61,10 @@ const tracks = [
   ]},
   { number:"12", title:"Peace Returns to the Valley", zhTitle:"和平重返山谷", summary:"和平回到 Aurelia，Jessara 也終於理解父王當年說『這一切有一天會屬於妳』真正代表什麼。", story:[
     "最後一章不是從慶典開始，而是從安靜開始。多年來第一次，沒有警鐘、沒有緊急使者，也沒有在城外集結的軍隊。",
-    "王城大門打開，士兵陸續回家。街道擠滿人民，有人歡呼，有人因鬆了一口氣而哭，也有人一直等待，直到不得不接受自己想見的人不會回來。",
+    "王城大門打開，士兵陸續回家。街道擠滿人民，有人歡呼，有人因鬆了一口氣而哭，也有人一直等待，直到回城的隊伍逐漸走完，自己想見的人仍然沒有出現。",
     "Jessara 沒有站在高高的陽台上，而是站在人群之中。",
     "Cedric 活著回來了，身上仍留著戰爭的痕跡。他與 Jessara 隔著人群看見彼此。兩人沒有戲劇性地奔向對方，只是笑了。",
-    "稍後，Jessara 一個人走回整個故事最初的王宮花園。同樣的晨光落在同一條小路與同一面舊牆上。",
+    "稍後，Jessara 一個人走回整個故事最初的王宮花園。同樣的晨光落在同一條小路與同一面舊牆上。戰爭結束了，但父王的下落仍然沒有答案；和平回來了，卻沒有解開所有謎團。",
     "她想起父王曾說：「One day, all of this will be yours.」小時候她以為那代表城堡、河谷、道路與土地。",
     "如今她終於懂了：王國不是財產。王國是人，是那些她必須負責守護的生命。",
     "Cedric 走過來，看著那面花園圍牆：「Do you remember trying to climb that?」Jessara：「I climbed it.」Cedric：「You fell.」Jessara：「You pushed me.」Cedric 笑了：「That is not how I remember it.」",
@@ -92,7 +92,7 @@ export default function ZhEpisodeTwoPage() {
       <section className="aureliaEpisodeHeader">
         <span className="sectionKicker">第二章 · Tracks 07–12</span>
         <h1>女王與戰爭</h1>
-        <p className="aureliaLead">Jessara 必須在害怕再次失去重要之人的同時領導王國。Cedric、銀翼小精靈與最後一次反攻，將故事帶向和平。</p>
+        <p className="aureliaLead">Jessara 必須在父王生死未明的陰影下領導王國，也害怕 Cedric 會像父王一樣消失在同一場戰爭裡。銀翼小精靈與最後一次反攻，將故事帶向和平。</p>
         <a className="episodeMusicBanner" href="https://youtu.be/bf-5DsIqcGE" target="_blank" rel="noopener noreferrer">
           <span className="episodeMusicIcon">▶</span>
           <span><strong>故事配樂 — Episode II — Track 07–12</strong><small>YouTube</small></span>
