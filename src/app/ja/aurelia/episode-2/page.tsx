@@ -10,7 +10,7 @@ const tracks = [
     "その静かな時間は長く続きません。前線から新たな命令が届き、Cedric は再び出発しなければなりません。",
     "城門で Jessara は「How long?」と聞きます。Cedric は「I don’t know.」彼女は「That is a terrible answer.」Cedric は「It is an honest one.」",
     "Jessara はもっと多くのことを言いたいのに、最後に口にできるのは「Come back.」だけです。Cedric は「I always do.」Jessara は彼を見る。「That’s not a promise.」Cedric は認めます。「No.」",
-    "軍が動き出し、Cedric は一度だけ城を振り返ります。Jessara はまだそこに立っています。同じ門から、すでに一人の大切な人を失った彼女は、もう一人が同じ戦争へ消えていくのを見送ります。"
+    "軍が動き出し、Cedric は一度だけ城を振り返ります。Jessara はまだそこに立っています。同じ門から、一人の大切な人が出て行き、そのまま戻らなかった記憶を抱えた彼女は、もう一人が同じ戦争へ向かうのを見送ります。"
   ]},
   { number:"08", title:"Her Wish Under the Moon", jaTitle:"月の下の願い", summary:"昼の Jessara は答えのない決断を下す女王。夜になって初めて、自分だけの願いを口にします。", story:[
     "戦争は最も長く、最も消耗する段階へ入ります。この章の中心は一つの大事件ではなく、女王の日常です。",
@@ -23,10 +23,10 @@ const tracks = [
     "Jessara はささやきます。「I don’t need victory tonight.」少し間を置いて、「Just… bring them home.」",
     "窓辺で眠っていた小妖精が目を覚まし、Jessara の肩に止まります。ここは、女王が『怖い』と認めることのできる数少ない場所です。"
   ]},
-  { number:"09", title:"When the Knight Fell", jaTitle:"騎士が倒れた日", summary:"重傷の Cedric が王宮へ運び込まれ、Jessara は父王を失った日の記憶と再び向き合うことになります。", story:[
+  { number:"09", title:"When the Knight Fell", jaTitle:"騎士が倒れた日", summary:"重傷の Cedric が王宮へ運び込まれ、Jessara は父王が行方不明になった日の恐怖と再び向き合うことになります。", story:[
     "Jessara が評議会にいると、一人の軍人が慌てて入り、礼をすることすら忘れます。「Your Majesty…」その表情だけで、Jessara は何かが起きたと悟ります。",
     "Cedric は鎧を切り開かれ、血にまみれた状態で王宮へ運び込まれます。",
-    "恐ろしい一瞬、Jessara の目に映るのは Cedric ではありません。何年も前に担架で運ばれた父王です。同じ廊下、同じ急ぐ足音、同じように走る医師たち。",
+    "恐ろしい一瞬、Jessara の目に映るのは Cedric ではありません。父王が行方不明になった日の混乱がよみがえります。血に染まった鎧、断片的な報告、急ぐ足音、そして王がどこへ消えたのか誰にも分からないという恐怖。",
     "誰かが「Your Majesty?」と呼び、ようやく彼女は再び動き出します。",
     "Cedric は何時間も意識を失っています。Jessara はいくつもの評議会の呼び出しを断り、そばに残ります。",
     "小妖精は Cedric の胸元に止まり、自分に使えるわずかで穏やかな魔法を使います。死を覆す奇跡ではありません。ただ、彼の呼吸を少しずつ安定させるだけの力です。",
@@ -61,10 +61,10 @@ const tracks = [
   ]},
   { number:"12", title:"Peace Returns to the Valley", jaTitle:"谷に平和が戻る", summary:"平和が Aurelia に戻り、Jessara は父王が『いつかすべてがお前のものになる』と言った本当の意味を理解します。", story:[
     "最終章は祝祭ではなく、静けさから始まります。何年ぶりかに警鐘が鳴らず、緊急の使者も来ず、城壁の外に軍が集結することもありません。",
-    "王都の門が開き、兵士たちが次々と帰還します。通りは人で埋まり、歓声を上げる家族もいれば、安堵で泣く人もいます。そして待ち続けた末に、大切な人が戻らないと受け入れなければならない人もいます。",
+    "王都の門が開き、兵士たちが次々と帰還します。通りは人で埋まり、歓声を上げる家族もいれば、安堵で泣く人もいます。そして帰還する兵の列が細くなっても、待っていた大切な人の姿を見つけられない人もいます。",
     "Jessara は高いバルコニーではなく、人々の中に立っています。",
     "Cedric は生きて帰ってきます。戦争の痕跡を体に残したまま。人混みの向こうで二人は互いを見つけます。劇的に駆け寄ることはありません。ただ、笑います。",
-    "その後、Jessara は物語の始まった王宮の庭へ一人で戻ります。同じ朝の光、同じ道、同じ古い壁。",
+    "その後、Jessara は物語の始まった王宮の庭へ一人で戻ります。同じ朝の光、同じ道、同じ古い壁。戦争は終わりましたが、父王の行方にはまだ答えがありません。平和は戻っても、すべての謎が解けたわけではありません。",
     "父王の言葉を思い出します。「One day, all of this will be yours.」幼い頃は、城、谷、道、土地のことだと思っていました。",
     "今なら分かります。王国は所有物ではありません。王国とは人々です。自分が守る責任を負う、その一人一人の命です。",
     "Cedric がやって来て庭の壁を見ます。「Do you remember trying to climb that?」Jessara は「I climbed it.」Cedric は「You fell.」Jessara は「You pushed me.」Cedric は笑って「That is not how I remember it.」",
@@ -92,7 +92,7 @@ export default function JaEpisodeTwoPage() {
       <section className="aureliaEpisodeHeader">
         <span className="sectionKicker">第二章 · Tracks 07–12</span>
         <h1>女王と戦争</h1>
-        <p className="aureliaLead">Jessara は、大切な人をもう一度失う恐怖を抱えながら王国を導きます。Cedric、銀翼の小妖精、そして最後の反攻が、物語を平和へと運びます。</p>
+        <p className="aureliaLead">Jessara は、父王の生死が分からないまま王国を導き、Cedric まで同じ戦争の中へ消えてしまうことを恐れます。銀翼の小妖精と最後の反攻が、物語を平和へと運びます。</p>
         <a className="episodeMusicBanner" href="https://youtu.be/bf-5DsIqcGE" target="_blank" rel="noopener noreferrer">
           <span className="episodeMusicIcon">▶</span>
           <span><strong>ストーリー音楽 — Episode II — Track 07–12</strong><small>YouTube</small></span>
