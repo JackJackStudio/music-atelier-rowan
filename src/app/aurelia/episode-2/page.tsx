@@ -14,7 +14,7 @@ const tracks = [
       "The moment does not last. New orders arrive from the front. Cedric must leave again.",
       "At the gate Jessara asks, “How long?” Cedric answers, “I don’t know.” She says, “That is a terrible answer.” Cedric replies, “It is an honest one.”",
       "Jessara wants to say much more, but in the end she says only, “Come back.” Cedric answers, “I always do.” Jessara looks at him. “That’s not a promise.” Cedric admits, “No.”",
-      "The army moves out. Cedric turns once toward the castle. Jessara is still standing there. She has already lost one person she loved through these same gates, and now she is watching another disappear toward the same war."
+      "The army moves out. Cedric turns once toward the castle. Jessara is still standing there. She has already watched one person she loves disappear through these same gates and never return. Now she is watching another ride toward the same war."
     ]
   },
   {
@@ -36,11 +36,11 @@ const tracks = [
   {
     number: "09",
     title: "When the Knight Fell",
-    summary: "Cedric is carried back to the palace gravely wounded, forcing Jessara to relive the day she lost her father.",
+    summary: "Cedric is carried back to the palace gravely wounded, forcing Jessara to relive the terror of her father’s disappearance.",
     story: [
       "Jessara is in council when a military officer enters too quickly and forgets to bow. He says only, “Your Majesty…” and she understands from his face that something has happened.",
       "Cedric is carried into the palace with his armor cut open and blood across his clothes.",
-      "For one terrible instant Jessara does not see Cedric. She sees her father on a stretcher years earlier — the same corridor, the same hurried footsteps, the same physicians rushing past.",
+      "For one terrible instant Jessara does not see Cedric. She remembers the day broken soldiers returned without her father — confused reports, bloodied armor, hurried footsteps, and the terrible certainty that no one knew where the king had gone.",
       "Someone says, “Your Majesty?” and only then does she move again.",
       "Cedric remains unconscious for hours. Jessara refuses several council requests and stays beside him.",
       "The little fairy lands near his chest and uses the faint, gentle magic she possesses. It is not a miracle that can reverse death. It is only enough to help his breathing steady.",
@@ -90,10 +90,10 @@ const tracks = [
     summary: "Peace returns to Aurelia, and Jessara finally understands what her father meant when he told her the kingdom would one day be hers.",
     story: [
       "The final chapter begins not with celebration but with silence. For the first time in years there are no alarm bells, no urgent messengers, and no army gathering outside the walls.",
-      "The city gates open and soldiers return home. Crowds fill the streets. Some families cheer. Some cry with relief. Others wait until it becomes clear that the person they hoped to see is not coming back.",
+      "The city gates open and soldiers return home. Crowds fill the streets. Some families cheer. Some cry with relief. Others wait until the returning ranks thin and the person they hoped to see is still not among them.",
       "Jessara stands among the people rather than above them on a balcony.",
       "Cedric returns alive, still carrying the marks of the war. He and Jessara see one another across the crowd. Neither runs dramatically toward the other. They simply smile.",
-      "Later Jessara walks alone into the palace garden where the story began. The same morning light falls across the same paths and the same old wall.",
+      "Later Jessara walks alone into the palace garden where the story began. The same morning light falls across the same paths and the same old wall. The war is over, but her father’s fate is still unresolved; peace has returned without answering every question.",
       "She remembers her father telling her, “One day, all of this will be yours.” As a child she thought he meant the castle, the valley, the roads, and the land.",
       "Now she understands that a kingdom is not property. It is people — the lives she is responsible for protecting.",
       "Cedric joins her and looks at the garden wall. “Do you remember trying to climb that?” Jessara answers, “I climbed it.” Cedric says, “You fell.” Jessara replies, “You pushed me.” Cedric smiles. “That is not how I remember it.”",
@@ -125,7 +125,7 @@ export default function EpisodeTwoPage() {
         <span className="sectionKicker">Episode II · Tracks 07–12</span>
         <h1>The Queen and the War</h1>
         <p className="aureliaLead">
-          Jessara must lead while fearing another personal loss. Cedric, the silver-winged fairy, and one final chance to
+          Jessara must lead while living with the unanswered fate of her missing father and fearing that Cedric may vanish into the same war. The silver-winged fairy and one final chance to
           save Aurelia carry the story toward its return to peace.
         </p>
         <a className="episodeMusicBanner" href="https://youtu.be/bf-5DsIqcGE" target="_blank" rel="noopener noreferrer">
