@@ -34,20 +34,20 @@ const tracks = [
     "城外では青と金の旗の下に兵が集まっています。Cedric もその中にいます。初めて本物の戦へ向かう若い騎士です。Jessara は思わず「You too?」Cedric は苦笑して「Apparently this is what knights do.」Jessara は「That is a stupid answer.」Cedric は「I know.」",
     "城門が開きます。父王は軍の先頭を進み、最後に一度だけ振り返って娘へ手を上げます。Jessara も手を上げますが、振ることはできません。父と Cedric の姿が道の向こうへ消えるまで、その場を動きません。"
   ]},
-  { number:"05", title:"The Empty Throne", jaTitle:"空の玉座", summary:"父王の帰還を待つ Jessara は、『王都へ戻る』ことと『本当に帰ってくる』ことは同じではないと知ります。", story:[
+  { number:"05", title:"The Empty Throne", jaTitle:"空の玉座", summary:"王は戦場で行方不明となり、Jessara は希望と責務の間に取り残されます。誰にも、その死を証明することはできません。", story:[
     "戦争は誰も予想しなかったほど長引きます。Jessara はますます多くの評議会に呼ばれ、死傷者、補給、難民、援軍という言葉の意味を現実として理解し始めます。",
-    "Cedric から時折、前線から短い便りが届きます。Jessara が最初に確認するのはいつも二つ。父王が生きていること、そして Cedric が生きていることです。",
-    "ある朝、王が帰還するという知らせが届きます。Jessara は戦争が終わったのだと思い、王宮をほとんど走って外庭へ向かいます。",
-    "しかし歓声も音楽も勝利の旗もありません。帰還した兵士たちは沈黙し、王家の旗は低く垂れています。",
-    "父王は馬に乗っていません。担架の上に横たわっています。",
-    "Jessara は初めて『王』ではなく、ただの父親を見ます。血を流し、傷つき、死ぬことのできる一人の人間として。",
-    "父王が一時的に目を覚ますと、Jessara は「You’re going to be fine.」と言い張ります。父は嘘だと分かっています。「Jessara… listen to me.」彼女は首を振り、「No. You can tell me later.」しかし、その『あとで』は来ません。",
-    "父王の死後、Jessara は一人で玉座の間へ入ります。椅子は空です。銀翼の小妖精が静かに肘掛けに座っています。Jessara は長い間そこに立ち、やがて初めて声を押さえずに泣きます。"
+    "Cedric から時折、前線から短い便りが届きます。Jessara が最初に確認するのはいつも二つ。父王の所在がまだ確認されていること、そして Cedric が生きていることです。",
+    "やがて山岳地帯の激戦で崩れた部隊が王都へ戻ります。報告は混乱し、断片的です。しかし複数の兵士が同じことを証言します。王は二本の矢を受け、その後、馬から落ちた。",
+    "混戦の中で負傷した軍馬は暴走を続けました。王の身体が戦場から引きずられ、そのまま近くの谷へ落ちた可能性があると考える兵士もいます。一方で、その前に王を見失ったという者もいます。誰にも確かなことは言えません。",
+    "Aurelia 軍は戦場、街道、谷底を捜索します。壊れた武器、裂けた旗、戦死者、主を失った馬は見つかります。しかし王の遺体だけは、最後まで見つかりません。",
+    "公式記録に残せるのは二つの言葉だけです。Missing in Action。Presumed Dead。Jessara はそのどちらも嫌います。一方は曖昧すぎ、もう一方はあまりにも結論めいているからです。",
+    "何日ものあいだ、Jessara は父王の書類を評議会から片づけることを許しません。廊下の足音が聞こえるたび顔を上げ、使者が来るたび一瞬だけ息を止めます。",
+    "やがて Jessara は一人で玉座の間へ入ります。玉座は空です。しかし、その空白に意味を与える葬儀はありません。銀翼の小妖精が静かに肘掛けに座る中、Jessara は玉座を見つめてささやきます。「Where are you?」"
   ]},
-  { number:"06", title:"The Crown Is Heavy", jaTitle:"王冠は重い", summary:"Aurelia は Jessara の悲しみが終わるまで待ってはくれません。戦争は続き、姫は女王にならなければなりません。", story:[
-    "葬儀が終わっても、戦争は終わりません。毎朝 Jessara を待つのは、請願書、死傷者名簿、食糧不足、軍からの要求、避難民、税、そして誰も代わりに答えてくれない問題です。",
+  { number:"06", title:"The Crown Is Heavy", jaTitle:"王冠は重い", summary:"Aurelia は行方不明の王を永遠に待つことはできません。Jessara は、父がまだ生きているかもしれないという思いを抱えたまま王冠を受け取ります。", story:[
+    "葬儀はありません。遺体もありません。ただ戦争だけが続いています。王国はいつまでも指導者不在ではいられず、毎朝 Jessara を待つのは、請願書、死傷者名簿、食糧不足、軍からの要求、避難民、税、そして誰も代わりに答えてくれない問題です。",
     "父王の机に座った Jessara は静かに「How did he do this every day?」と尋ねます。誰も答えません。",
-    "小妖精は自分より大きな書類を運ぼうとして、その下敷きになります。Jessara は思わず笑い、その直後に泣き出します。父を失ってから初めて笑った瞬間でした。",
+    "小妖精は自分より大きな書類を運ぼうとして、その下敷きになります。Jessara は思わず笑い、その直後に泣き出します。父王が行方不明になって以来、初めて笑った瞬間でした。",
     "戴冠の日、王冠が卓上に置かれています。美しいのに、ほとんど残酷なほど重く見えます。Cedric は式に出るため、前線から短い時間だけ戻ってきます。",
     "Jessara は「Do I look terrified?」と尋ねます。Cedric は「Yes.」彼女が睨むと、「But only to people who know you.」と付け加えます。",
     "Jessara は明日まで残ってほしいと言います。Cedric は答えません。二人とも、戦争が戴冠式のために一日止まることなどないと分かっています。",
@@ -74,7 +74,7 @@ export default function JaEpisodeOnePage() {
       <section className="aureliaEpisodeHeader">
         <span className="sectionKicker">第一章 · Tracks 01–06</span>
         <h1>姫が女王になるまで</h1>
-        <p className="aureliaLead">幼年期は、好奇心、友情、戦争、喪失へと姿を変え、Jessara はあまりにも早く王冠を受け取ることになります。</p>
+        <p className="aureliaLead">幼年期は、好奇心、友情、戦争、そして答えのない不確かさへと姿を変え、Jessara はあまりにも早く王冠を受け取ることになります。</p>
         <AnalyticsLink className="episodeMusicBanner" href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer" eventName="listen_soundtrack" params={{ kingdom: "aurelia", episode: 1, tracks: "01-06", language: "ja", source: "episode_page", platform: "youtube" }}>
           <span className="episodeMusicIcon">▶</span>
           <span><strong>ストーリー音楽 — Episode I — Track 01–06</strong><small>YouTube でサウンドトラックを開き、音楽とともに物語をお楽しみください。</small></span>
