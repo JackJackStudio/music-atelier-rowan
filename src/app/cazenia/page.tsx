@@ -15,26 +15,30 @@ export default function CazeniaPage() {
       </header>
 
       <section className="aureliaKingdomHero">
-        <div className="aureliaKingdomArt"><img src="/images/Cazenia-kingdom.png" alt="The fertile plains of Cazenia" /></div>
+        <div className="aureliaKingdomArt"><img src="/images/Cazenia-kingdom.png" alt="The elegant kingdom of Cazenia" /></div>
         <div className="aureliaKingdomIntro">
-          <span className="sectionKicker">The Great Plains of Triveria</span>
+          <span className="sectionKicker">The Court Kingdom of Triveria</span>
           <h1>Kingdom Cazenia</h1>
-          <p className="aureliaLead">A broad and fertile kingdom of open plains, ordered fields, irrigation channels, and long roads — a land where abundance depends upon planning.</p>
-          <p>Cazenia possesses Triveria's largest stretches of cultivable land. Grain, fruit, vegetables, flax, cotton, and hemp grow across its plains, making the kingdom both a great food producer and the continent's most important source of textile raw materials.</p>
+          <p className="aureliaLead">
+            A kingdom that treats beauty, art, music, architecture, and refinement as expressions of civilization itself — elegant, cultivated, and almost too perfect.
+          </p>
+          <p>
+            Cazenia is known for grand palaces, monumental arches, sculpture, frescoes, music halls, dance, fashion, and an exacting court culture. Beauty is not considered decoration here. It is discipline, education, and a visible expression of order.
+          </p>
         </div>
       </section>
 
       <section className="kingdomPillars">
-        <article><span className="sectionKicker">Land</span><h2>Fields & Open Plains</h2><p>Where Brenalia closes around the traveler, Cazenia opens toward the horizon. Farms, estates, granaries, windmills, canals, and roads form a carefully managed agricultural landscape.</p></article>
-        <article><span className="sectionKicker">Livelihood</span><h2>Harvest & Fiber</h2><p>Wheat and other crops feed the realm, while flax, cotton, and hemp supply Triveria's textile trade. Cazenia grows the raw materials that Aurelia's workshops can transform into finished goods.</p></article>
-        <article><span className="sectionKicker">Ideal</span><h2>Order & Progress</h2><p>Water must be directed, harvests counted, stores protected, and roads maintained. Cazenian culture therefore prizes discipline, planning, efficiency, and the belief that order protects prosperity.</p></article>
+        <article><span className="sectionKicker">Culture</span><h2>Art & Music</h2><p>Painting, sculpture, music, dance, fashion, and architecture are cultivated at the highest level. Artistic achievement is treated as part of Cazenia's identity and prestige.</p></article>
+        <article><span className="sectionKicker">Court</span><h2>Elegance & Education</h2><p>Royal life prizes etiquette, education, presentation, and control. The ideal Cazenian courtier is expected to appear composed even when politics beneath the surface are anything but simple.</p></article>
+        <article><span className="sectionKicker">Ideal</span><h2>Beauty & Order</h2><p>Cazenia believes civilization is strongest when everything has form, balance, and purpose. Its beauty is genuine — but so is the pressure to preserve perfection.</p></article>
       </section>
 
-      <section className="kingdomQuote"><span>CAZENIA</span><blockquote>“Cazenia grows what Triveria needs.”</blockquote></section>
+      <section className="kingdomQuote"><span>CAZENIA</span><blockquote>“Beauty is part of civilization.”</blockquote></section>
 
       <section className="aureliaDetails">
-        <article><span className="sectionKicker">Royal Standard</span><h2>Burgundy, Gold, and the Crown</h2><p>Cazenia's burgundy-and-gold standard carries an ornate royal crest: formal, deliberate, and unmistakably controlled. It reflects a realm that sees strength in structure and continuity.</p></article>
-        <article><span className="sectionKicker">The Princess</span><h2>Princess Erissia</h2><p>Brilliant, composed, and accustomed to control, Erissia reflects the logic of her homeland. To Cazenia, chaos wastes resources; order protects people. Her story will reveal what that belief costs — and what it can save.</p></article>
+        <article><span className="sectionKicker">Royal Standard</span><h2>Burgundy, Gold, and the Eight-Point Star</h2><p>The Cazenian emblem is deliberately balanced and symmetrical: a refined golden court motif crowned not by a royal crown, but by an eight-point star. The star represents proportion, direction, and the pursuit of cultivated perfection.</p></article>
+        <article><span className="sectionKicker">The Princess</span><h2>Princess Erissia</h2><p>Elegant, intelligent, and trained from childhood to embody the image of the perfect princess, Erissia understands Cazenia's beauty better than anyone — and also the cost of living inside a life designed by others.</p></article>
       </section>
 
       <div className="aureliaNext"><Link href="/triveria/">Explore Triveria →</Link></div>

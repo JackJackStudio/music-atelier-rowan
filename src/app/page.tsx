@@ -1,21 +1,61 @@
 import Link from "next/link";
 import AnalyticsLink from "./AnalyticsLink";
 
-const stories = [
+const primaryStories = [
+  {
+    roman: "Story I",
+    slug: "aurelia",
+    title: "Aurelia",
+    subtitle: "The Princess and the Silver Wings",
+    note: "A princess. A crown. A kingdom at war.",
+    status: "12 Tracks · Complete",
+    enabled: true,
+  },
+  {
+    roman: "Story II",
+    slug: "brenalia",
+    title: "Brenalia",
+    subtitle: "The Princess and the Lost Relic",
+    note: "A forest kingdom. An ancient relic. A journey beyond the border.",
+    status: "Story in progress",
+    enabled: false,
+  },
+  {
+    roman: "Story III",
+    slug: "cazenia",
+    title: "Cazenia",
+    subtitle: "The Princess and the Silver Thread",
+    note: "A brilliant princess. A silver thread. A life already woven for her.",
+    status: "Coming soon",
+    enabled: false,
+  },
+];
+
+const futureStories = [
+  { roman: "Story IV", title: "Three Princesses" },
+  { roman: "Story V", title: "Drazuvia Island" },
+  { roman: "Story VI", title: "Sorrow Peaks" },
+  { roman: "Story VII", title: "Temple of Spirits" },
+];
+
+const kingdoms = [
   {
     slug: "aurelia",
-    note: "A princess. A crown. A kingdom at war.",
-    status: "12 Tracks",
+    title: "Aurelia",
+    motto: "Light · Duty · People",
+    note: "Rivers, workshops, white stone, and morning light.",
   },
   {
     slug: "brenalia",
-    note: "A forest kingdom. An ancient relic. A journey beyond the border.",
-    status: "Story in progress",
+    title: "Brenalia",
+    motto: "Nature · Freedom · Harmony",
+    note: "Ancient forests, hidden ruins, freedom, and old roads.",
   },
   {
     slug: "cazenia",
-    note: "A brilliant princess. A silver thread. A kingdom yet to be revealed.",
-    status: "Coming soon",
+    title: "Cazenia",
+    motto: "Beauty · Culture · Progress",
+    note: "Art, elegance, court culture, and disciplined beauty.",
   },
 ];
 
@@ -30,7 +70,8 @@ export default function Home() {
           </picture>
         </a>
         <div className="navLinks">
-          <a href="#stories">Worlds</a>
+          <a href="#stories">Stories</a>
+          <a href="#kingdoms">Kingdoms</a>
           <Link href="/triveria/">Triveria</Link>
           <a href="#about">About</a>
           <Link href="/zh/">中文</Link>
@@ -41,37 +82,95 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="heroArtwork" role="img" aria-label="Music Atelier Rowan fantasy atelier overlooking a moonlit kingdom" />
         <div className="heroFade" />
-        <a className="scrollCue" href="#stories">Enter the worlds</a>
+        <a className="scrollCue" href="#stories">Enter Triveria</a>
       </section>
 
       <section className="stories" id="stories">
         <div className="sectionHeading">
-          <span>The Continent of Triveria</span>
-          <h1>Choose a story. Enter a world.</h1>
-          <p>Three kingdoms begin apart. Their music, legends, and princesses will one day cross the same road.</p>
+          <span>The Triveria Saga</span>
+          <h1>Seven stories. One continent.</h1>
+          <p>
+            The saga begins with three princesses in three kingdoms, then follows the road that brings their stories together.
+          </p>
         </div>
 
         <div className="storyGrid">
-          {stories.map((story) => (
+          {primaryStories.map((story) => (
             <div className="storyItem" key={story.slug}>
-              <AnalyticsLink className={`storyCard ${story.slug}`} href={`/${story.slug}/`} ariaLabel={`Enter story: ${story.slug}`} eventName="enter_story" params={{ kingdom: story.slug, language: "en", source: "homepage" }}>
-                <div className="storyLogoArea">
-                  <img className="storyLogo" src={`/logos/${story.slug}-logo.webp`} alt="" />
-                </div>
-                <div className="storyContent">
-                  <span className="storyStatus">{story.status}</span>
-                  <p className="storyNote">{story.note}</p>
-                  <span className="enter">Enter story →</span>
-                </div>
-              </AnalyticsLink>
-              {story.slug === "aurelia" && (
-                <div className="storyMusicLinks">
-                  <AnalyticsLink href="https://youtu.be/aufR8Y0sHTs" target="_blank" rel="noopener noreferrer" eventName="listen_soundtrack" params={{ kingdom: "aurelia", episode: 1, tracks: "01-06", language: "en", source: "homepage", platform: "youtube" }}>
-                    <span>▶</span> Story Music — Episode 01–06
-                  </AnalyticsLink>
+              {story.enabled ? (
+                <AnalyticsLink
+                  className={`storyCard ${story.slug}`}
+                  href={`/stories/${story.slug}/`}
+                  ariaLabel={`Enter ${story.roman}: ${story.title}`}
+                  eventName="enter_story"
+                  params={{ story: story.slug, language: "en", source: "homepage" }}
+                >
+                  <div className="storyLogoArea">
+                    <img className="storyLogo" src={`/logos/${story.slug}-logo.webp`} alt="" />
+                  </div>
+                  <div className="storyContent">
+                    <span className="storyIndex">{story.roman}</span>
+                    <span className="storyStatus">{story.status}</span>
+                    <p className="storyNote">{story.note}</p>
+                    <span className="enter">Enter story →</span>
+                  </div>
+                </AnalyticsLink>
+              ) : (
+                <div className={`storyCard ${story.slug} locked`} aria-label={`${story.roman}: ${story.title}, ${story.status}`}>
+                  <div className="storyLogoArea">
+                    <img className="storyLogo" src={`/logos/${story.slug}-logo.webp`} alt="" />
+                  </div>
+                  <div className="storyContent">
+                    <span className="storyIndex">{story.roman}</span>
+                    <span className="storyStatus">{story.status}</span>
+                    <p className="storyNote">{story.note}</p>
+                    <span className="enter mutedEnter">Not yet available</span>
+                  </div>
                 </div>
               )}
             </div>
+          ))}
+        </div>
+
+        <div className="futureStoryGrid" aria-label="Future stories in the Triveria Saga">
+          {futureStories.map((story) => (
+            <article className="futureStoryCard" key={story.roman}>
+              <span>{story.roman}</span>
+              <h2>{story.title}</h2>
+              <small>Coming soon</small>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="kingdoms" id="kingdoms">
+        <div className="sectionHeading">
+          <span>The Three Kingdoms</span>
+          <h1>Explore the kingdoms of Triveria.</h1>
+          <p>
+            Stories move through time. Kingdoms are the places, cultures, people, and traditions that endure around them.
+          </p>
+        </div>
+
+        <div className="kingdomGrid">
+          {kingdoms.map((kingdom) => (
+            <AnalyticsLink
+              className={`kingdomCard ${kingdom.slug}`}
+              href={`/${kingdom.slug}/`}
+              ariaLabel={`Explore the Kingdom of ${kingdom.title}`}
+              eventName="enter_kingdom"
+              params={{ kingdom: kingdom.slug, language: "en", source: "homepage" }}
+              key={kingdom.slug}
+            >
+              <div className="kingdomLogoFrame">
+                <img src={`/images/Kingdom_${kingdom.title}.png`} alt={`Kingdom of ${kingdom.title}`} />
+              </div>
+              <div className="kingdomCardCopy">
+                <span>{kingdom.motto}</span>
+                <p>{kingdom.note}</p>
+                <strong>Explore kingdom →</strong>
+              </div>
+            </AnalyticsLink>
           ))}
         </div>
       </section>
@@ -103,7 +202,7 @@ export default function Home() {
               stories in your imagination. If you would like to go deeper, the original story settings behind each project
               are here on this site — waiting for you to discover them.
             </p>
-            <a href="#stories">Explore the original story settings →</a>
+            <a href="#stories">Explore the Triveria Saga →</a>
           </div>
         </div>
       </section>
