@@ -163,7 +163,7 @@ export default function Home() {
               key={kingdom.slug}
             >
               <div className="kingdomLogoFrame">
-                <img src={`/logos/${kingdom.slug}-kingdom.webp`} alt={`Kingdom of ${kingdom.title}`} />
+                <img src={`/images/Kingdom_${kingdom.title}.png`} alt={`Kingdom of ${kingdom.title}`} />
               </div>
               <div className="kingdomCardCopy">
                 <span>{kingdom.motto}</span>
