@@ -1009,3 +1009,140 @@ footer strong { color: #b9b0a4; font-weight: 500; }
   .navLinks { gap: .75rem; font-size: .7rem; }
   .navLinks a:nth-child(4) { display: none; }
 }
+
+
+/* Aurelia kingdom lore hub */
+.aureliaHubSection,
+.aureliaLoreIntro {
+  margin-top: 6rem;
+}
+.aureliaHubHeading {
+  max-width: 820px;
+  margin-bottom: 2rem;
+}
+.aureliaHubHeading h2,
+.aureliaLoreIntro h1 {
+  margin: .6rem 0 1rem;
+  font-size: clamp(2.7rem, 5vw, 5rem);
+  line-height: 1;
+  font-weight: 400;
+}
+.aureliaHubHeading p,
+.aureliaLoreIntro p {
+  max-width: 760px;
+  color: var(--muted);
+  font: .95rem/1.8 system-ui,sans-serif;
+}
+.aureliaHubGrid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 1rem;
+}
+.aureliaHubCard,
+.aureliaLoreCard {
+  display: block;
+  padding: clamp(1.5rem,3vw,2.5rem);
+  border: 1px solid rgba(255,255,255,.09);
+  background:
+    radial-gradient(circle at 85% 15%,rgba(61,92,139,.14),transparent 13rem),
+    linear-gradient(145deg,rgba(19,28,42,.8),rgba(7,10,15,.98));
+}
+.aureliaHubCard {
+  min-height: 18rem;
+  transition: transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.aureliaHubCard:hover,
+.characterCardLink:hover {
+  transform: translateY(-4px);
+  border-color: rgba(220,182,95,.45);
+  box-shadow: 0 18px 42px rgba(0,0,0,.28);
+}
+.aureliaHubCard > span,
+.aureliaLoreCard > span {
+  color: var(--gold);
+  font: .66rem system-ui,sans-serif;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.aureliaHubCard h3,
+.aureliaLoreCard h2 {
+  margin: .7rem 0 .8rem;
+  font-size: clamp(1.8rem,3vw,3rem);
+  line-height: 1.05;
+  font-weight: 400;
+}
+.aureliaHubCard p,
+.aureliaLoreCard p {
+  color: var(--muted);
+  font: .9rem/1.75 system-ui,sans-serif;
+}
+.aureliaHubCard strong,
+.aureliaLoreCard strong {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--gold-soft);
+  font: 500 .78rem system-ui,sans-serif;
+}
+.aureliaCharacterDirectory {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.aureliaCharacterDirectory .aureliaLoreCard {
+  min-height: 23rem;
+}
+.characterCardLink {
+  transition: transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.aureliaPlaceGrid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.aureliaPlaceGrid .aureliaLoreCard {
+  min-height: 18rem;
+}
+.aureliaPalaceFeature {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3rem;
+  overflow: hidden;
+  border: 1px solid rgba(220,182,95,.17);
+  background: linear-gradient(145deg,rgba(21,30,45,.86),rgba(8,11,16,.98));
+}
+.aureliaPalaceFeature > div {
+  padding: clamp(2rem,4vw,4rem);
+}
+.aureliaPalaceFeature h2 {
+  margin: .7rem 0 1rem;
+  font-size: clamp(2rem,4vw,4rem);
+  line-height: 1;
+  font-weight: 400;
+}
+.aureliaPalaceFeature p {
+  color: var(--muted);
+  font: .92rem/1.8 system-ui,sans-serif;
+}
+.aureliaPalaceFeature img {
+  width: 100%;
+  height: 100%;
+  min-height: 24rem;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 960px) {
+  .aureliaHubGrid { grid-template-columns: 1fr; }
+  .aureliaCharacterDirectory { grid-template-columns: 1fr; }
+  .aureliaPlaceGrid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .aureliaPalaceFeature { grid-template-columns: 1fr; }
+  .aureliaPalaceFeature img { min-height: 20rem; }
+}
+@media (max-width: 650px) {
+  .aureliaPlaceGrid { grid-template-columns: 1fr; }
+  .aureliaTabs { overflow-x: auto; justify-content: flex-start; }
+  .aureliaTabs a { white-space: nowrap; }
+}
