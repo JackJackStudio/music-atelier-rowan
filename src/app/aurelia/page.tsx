@@ -36,7 +36,7 @@ export default function AureliaPage() {
             <Link className="languageLink" href="/ja/aurelia/">日本語</Link>
           </div>
         </div>
-        <img className="aureliaWordmark" src="/logos/aurelia-logo.webp" alt="Aurelia — The Princess and the Silver Wings" />
+        <img className="aureliaWordmark" src="/images/Kingdom_Aurelia_Banner_Transparent.png" alt="Kingdom of Aurelia" />
       </header>
 
       <AureliaNav active="kingdom" />

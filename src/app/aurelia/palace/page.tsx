@@ -16,7 +16,7 @@ export default function AureliaPalacePage() {
     <main className="aureliaPage kingdomPage aureliaRealm">
       <header className="aureliaTop">
         <div><Link className="back" href="/aurelia/">← Back to Kingdom Aurelia</Link></div>
-        <img className="aureliaWordmark" src="/logos/aurelia-logo.webp" alt="Aurelia — The Princess and the Silver Wings" />
+        <img className="aureliaWordmark" src="/images/Kingdom_Aurelia_Banner_Transparent.png" alt="Kingdom of Aurelia" />
       </header>
 
       <AureliaNav active="palace" />
